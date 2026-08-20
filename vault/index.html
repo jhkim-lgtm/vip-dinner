@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>1%CLUB VIP DINNER — Invitation</title>
+<meta property="og:title" content="1%CLUB VIP DINNER">
+<meta property="og:description" content="Unlock the vault. 2026. 8. 28 FRI 7PM">
+<meta name="theme-color" content="#101216">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+:root{--steel:#1a1d23;--edge:#3a3f4a;--glow:#ffb84d;--txt:#e8eaef}
+body{background:#101216;color:var(--txt);font-family:'Pretendard Variable',Pretendard,sans-serif;overflow-x:hidden;
+ background-image:radial-gradient(900px 640px at 50% 14%,#1b1f27 0%,#101216 66%)}
+.gate{min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;
+ padding:44px 24px;perspective:1200px;text-align:center;position:relative;z-index:2}
+.gate.hidden{display:none}
+.g-eyebrow{font-family:'Space Grotesk',sans-serif;font-size:10px;letter-spacing:.5em;text-indent:.5em;color:#6d7482;margin-bottom:34px}
+.dial-wrap{transform-style:preserve-3d;will-change:transform}
+.dial{position:relative;width:230px;height:230px;border-radius:50%;cursor:grab;user-select:none;-webkit-user-select:none;touch-action:none;
+ background:radial-gradient(circle at 36% 30%,#3d434f,var(--steel) 55%,#0c0e12 90%);
+ box-shadow:0 26px 64px rgba(0,0,0,.75),inset 0 3px 8px rgba(255,255,255,.14),inset 0 -10px 20px rgba(0,0,0,.6);
+ border:1px solid var(--edge)}
+.dial-face{position:absolute;inset:16px;border-radius:50%;will-change:transform;
+ background:
+  repeating-conic-gradient(from 0deg,rgba(255,255,255,.4) 0deg .8deg,transparent .8deg 9deg),
+  radial-gradient(circle at 40% 34%,#2b303a,#171a20 70%);
+ border:1px solid #454b58;box-shadow:inset 0 2px 6px rgba(255,255,255,.1)}
+.dial-face::after{content:"";position:absolute;left:50%;top:6px;transform:translateX(-50%);
+ width:3px;height:16px;background:var(--glow);border-radius:2px;box-shadow:0 0 8px rgba(255,184,77,.8)}
+.dial-core{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:96px;height:96px;border-radius:50%;
+ background:radial-gradient(circle at 38% 32%,#333945,#14161b 75%);border:1px solid #454b58;
+ display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;pointer-events:none}
+.dial-core .pct{font-family:'Space Grotesk',sans-serif;font-size:24px;font-weight:700;color:var(--txt)}
+.dial-core .st{font-size:8px;letter-spacing:.34em;text-indent:.34em;color:#6d7482}
+.marker{position:absolute;left:50%;top:-9px;transform:translateX(-50%);width:0;height:0;
+ border-left:7px solid transparent;border-right:7px solid transparent;border-top:11px solid var(--glow);
+ filter:drop-shadow(0 0 6px rgba(255,184,77,.7))}
+.g-hint{margin-top:38px;font-size:11px;letter-spacing:.34em;text-indent:.34em;color:#6d7482;animation:hp 2.4s infinite}
+@keyframes hp{0%,100%{opacity:.4}50%{opacity:1}}
+.g-sub{margin-top:12px;font-size:10px;letter-spacing:.2em;color:#464c58}
+.prog{margin-top:22px;width:150px;height:2px;background:#262a33;border-radius:2px;overflow:hidden}
+.prog i{display:block;height:100%;width:0;background:var(--glow);transition:width .12s}
+/* reveal */
+.inner{position:relative;z-index:1;max-width:470px;margin:0 auto;padding:66px 26px 90px;display:none}
+.revealed .inner{display:block;animation:fade 1s .35s both}
+@keyframes fade{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+.doc{background:linear-gradient(172deg,#1b1f27,#14171d);border:1px solid var(--edge);border-radius:14px;
+ padding:48px 30px;text-align:center;box-shadow:0 26px 70px rgba(0,0,0,.6);position:relative}
+.doc::before{content:"CONFIDENTIAL";position:absolute;top:18px;left:0;right:0;text-align:center;
+ font-family:'Space Grotesk',sans-serif;font-size:8.5px;letter-spacing:.6em;text-indent:.6em;color:#565d6b}
+.logo{width:56%;margin:14px 0 22px}
+.rule{width:46px;height:1px;background:var(--edge);margin:0 auto 22px}
+.eyebrow{font-family:'Space Grotesk',sans-serif;font-size:10px;letter-spacing:.46em;text-indent:.46em;color:var(--glow);margin-bottom:18px}
+.copy{font-size:13.5px;font-weight:300;line-height:2.05;color:#c4c8d2;word-break:keep-all}
+.detail{margin-top:26px;display:grid;gap:14px}
+.k{font-family:'Space Grotesk',sans-serif;font-size:9px;letter-spacing:.44em;color:#6d7482;margin-bottom:4px}
+.v{font-size:17px;font-weight:600;color:#f2f4f8}
+.v small{font-size:12px;font-weight:400;color:#9aa1af}
+.host{margin-top:24px;font-size:11px;letter-spacing:.16em;color:#8b919e}
+.form-card{margin-top:22px;background:#171a21;border:1px solid var(--edge);border-radius:14px;padding:34px 28px}
+.form-card h2{font-family:'Space Grotesk',sans-serif;font-size:12px;letter-spacing:.48em;text-indent:.48em;text-align:center;
+ color:var(--glow);margin-bottom:8px}
+.note{font-size:11.5px;color:#767d8b;text-align:center;margin-bottom:22px;line-height:1.9}
+.field{margin-bottom:15px}
+.field label{display:block;font-size:10.5px;font-weight:600;letter-spacing:.24em;color:#8b919e;margin-bottom:7px}
+.field input,.field textarea{width:100%;background:#0e1015;border:1px solid #2e333d;border-radius:10px;
+ padding:13px 14px;color:#f2f4f8;font-family:inherit;font-size:15px;outline:none}
+.field input:focus,.field textarea:focus{border-color:var(--glow)}
+.choice{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.choice input{display:none}
+.choice span{display:block;text-align:center;padding:13px 6px;border:1px solid #2e333d;border-radius:10px;
+ font-size:13px;color:#9aa1af;cursor:pointer;background:#0e1015}
+.choice input:checked+span{border-color:var(--glow);color:#ffd394;background:rgba(255,184,77,.08)}
+.submit{width:100%;margin-top:8px;padding:16px 0;border-radius:12px;border:none;cursor:pointer;
+ background:linear-gradient(135deg,#ffc266,#d68f2e);color:#221503;font-family:inherit;font-weight:700;font-size:14px;
+ letter-spacing:.3em;text-indent:.3em}
+.done{display:none;text-align:center;padding:26px 0 8px}
+.done .big{font-family:'Space Grotesk',sans-serif;font-size:17px;letter-spacing:.34em;color:var(--glow);margin-bottom:12px}
+.done p{font-size:13px;color:#9aa1af;line-height:2}
+.foot{text-align:center;font-family:'Space Grotesk',sans-serif;font-size:9px;letter-spacing:.34em;color:#3b414d;padding:44px 0 10px}
+</style>
+</head>
+<body>
+<div class="gate" id="gate">
+  <div class="g-eyebrow">1%CLUB PRIVATE VAULT</div>
+  <div class="dial-wrap" id="tilt">
+    <div class="dial" id="dial">
+      <div class="marker"></div>
+      <div class="dial-face" id="face"></div>
+      <div class="dial-core"><div class="pct">1%</div><div class="st">TURN</div></div>
+    </div>
+  </div>
+  <div class="g-hint">다이얼을 돌려 열어주세요</div>
+  <div class="g-sub">이 초대장은 오직 한 분을 위한 것입니다</div>
+  <div class="prog"><i id="prog"></i></div>
+</div>
+
+<div class="inner">
+  <div class="doc">
+    <img class="logo" src="../assets/logo-white.png" alt="1%CLUB">
+    <div class="rule"></div>
+    <div class="eyebrow">ACCESS GRANTED — YOU ARE INVITED</div>
+    <p class="copy">금고 안에 넣어둔 저녁 한 끼.<br>
+    1%CLUB이 특별히 감사한 분들을 모시고<br>조용한 자리를 준비했습니다.</p>
+    <div class="detail">
+      <div><div class="k">DATE</div><div class="v">2026. 8. 28 <small>FRI · 7:00 PM</small></div></div>
+      <div><div class="k">PLACE</div><div class="v">최선상회</div></div>
+      <div><div class="k">ADDRESS</div><div class="v"><small>서울 성동구 장터길 38-1</small></div></div>
+    </div>
+    <div class="host">host. 1%CLUB 김준형</div>
+  </div>
+
+  <div class="form-card">
+    <div id="formWrap">
+      <h2>RSVP</h2>
+      <p class="note">좌석이 한정되어 있어 조기 마감될 수 있습니다.<br>참석 여부를 남겨주시면 확정 안내를 드립니다.</p>
+      <form id="rsvp" action="https://docs.google.com/forms/d/e/1FAIpQLSfRes3Ovq3e8JnzYNy0iBGg8RvgpxpMckgQgIQihBntAJuZFQ/formResponse"
+            method="POST" target="gframe">
+        <div class="field"><label>성함</label>
+          <input name="entry.218985598" required autocomplete="name" placeholder="성함을 입력해주세요"></div>
+        <div class="field"><label>연락처</label>
+          <input name="entry.168467083" required autocomplete="tel" inputmode="tel" placeholder="010-0000-0000"></div>
+        <div class="field"><label>참석 여부</label>
+          <div class="choice">
+            <label><input type="radio" name="entry.68671262" value="참석합니다" required><span>참석합니다</span></label>
+            <label><input type="radio" name="entry.68671262" value="아쉽지만 참석이 어렵습니다"><span>참석이 어렵습니다</span></label>
+          </div></div>
+        <div class="field"><label>식이 제한 · 알레르기 (선택)</label>
+          <input name="entry.608571734" placeholder="예: 갑각류 알레르기"></div>
+        <div class="field"><label>남기실 메시지 (선택)</label>
+          <textarea name="entry.2015678768" rows="2"></textarea></div>
+        <input type="hidden" name="entry.1439836650" value="VAULT">
+        <button type="submit" class="submit">참석 여부 보내기</button>
+      </form>
+    </div>
+    <div class="done" id="done">
+      <div class="big">LOCKED IN</div>
+      <p>회신이 전달되었습니다.<br>확정 안내를 곧 보내드리겠습니다.</p>
+    </div>
+  </div>
+  <div class="foot">1%CLUB · PRIVATE DINNER SERIES</div>
+</div>
+<iframe name="gframe" style="display:none"></iframe>
+
+<script>
+/* tilt */
+const tilt=document.getElementById('tilt');
+let rx=0,ry=0,idle=true,lastTouch=0,t0=performance.now(),crx=0,cry=0;
+function setT(nx,ny){ry=nx*14;rx=-ny*12;idle=false;lastTouch=performance.now();}
+window.addEventListener('deviceorientation',e=>{
+  if(e.gamma==null)return;
+  setT(Math.max(-1,Math.min(1,e.gamma/30)),Math.max(-1,Math.min(1,(e.beta-45)/40)));
+});
+(function loop(now){
+  const t=(now-t0)/1000;
+  if(performance.now()-lastTouch>2500)idle=true;
+  if(idle){ry=Math.sin(t*.65)*9;rx=Math.cos(t*.5)*6;}
+  crx+=(rx-crx)*.08;cry+=(ry-cry)*.08;
+  tilt.style.transform=`rotateX(${crx}deg) rotateY(${cry}deg)`;
+  requestAnimationFrame(loop);
+})(t0);
+
+/* dial rotation to unlock */
+const dial=document.getElementById('dial'),face=document.getElementById('face'),prog=document.getElementById('prog');
+const NEED=420;let total=0,last=null,unlocked=false;
+function ang(e){
+  const r=dial.getBoundingClientRect();
+  const p=e.touches?e.touches[0]:e;
+  return Math.atan2(p.clientY-(r.top+r.height/2),p.clientX-(r.left+r.width/2))*180/Math.PI;
+}
+function start(e){if(unlocked)return;e.preventDefault();last=ang(e);dial.style.cursor='grabbing';}
+function move(e){
+  if(last==null||unlocked)return;e.preventDefault();
+  const a=ang(e);let d=a-last;
+  if(d>180)d-=360;if(d<-180)d+=360;
+  total+=Math.abs(d);last=a;
+  face.style.transform=`rotate(${total}deg)`;
+  prog.style.width=Math.min(100,total/NEED*100)+'%';
+  if(total>=NEED)unlock();
+}
+function end(){last=null;dial.style.cursor='grab';}
+dial.addEventListener('pointerdown',start);window.addEventListener('pointermove',move);window.addEventListener('pointerup',end);
+function unlock(){
+  unlocked=true;
+  if(navigator.vibrate)navigator.vibrate([30,60,30]);
+  document.getElementById('gate').classList.add('hidden');
+  document.body.classList.add('revealed');
+  window.scrollTo({top:0});
+}
+document.getElementById('rsvp').addEventListener('submit',()=>{
+  setTimeout(()=>{document.getElementById('formWrap').style.display='none';
+    document.getElementById('done').style.display='block';},600);
+});
+</script>
+</body>
+</html>
