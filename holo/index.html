@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>1%CLUB VIP DINNER — Invitation</title>
+<meta property="og:title" content="1%CLUB VIP DINNER">
+<meta property="og:description" content="ADMIT ONE. 2026. 8. 28 FRI 7PM">
+<meta name="theme-color" content="#0b0f16">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&family=IBM+Plex+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+:root{--blue:#4a95ff;--blue2:#7db4ff;--bg:#0b0f16;--panel:#121826}
+body{background:var(--bg);color:#dfe8f5;font-family:'IBM Plex Sans KR',sans-serif;overflow-x:hidden;
+ background-image:radial-gradient(1000px 700px at 50% -8%,#141c2c 0%,var(--bg) 62%)}
+.grid-bg{position:fixed;inset:0;pointer-events:none;opacity:.5;
+ background-image:linear-gradient(rgba(74,149,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(74,149,255,.05) 1px,transparent 1px);
+ background-size:44px 44px}
+.stage{min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;
+ padding:44px 22px;perspective:1200px;position:relative}
+.ticket{width:min(88vw,350px);position:relative;transform-style:preserve-3d;will-change:transform}
+.tk{position:relative;border-radius:16px;overflow:hidden;background:linear-gradient(160deg,#151d2e,#0e1420 60%,#131b2b);
+ border:1px solid rgba(74,149,255,.45);box-shadow:0 26px 70px rgba(0,0,0,.7),0 0 40px rgba(74,149,255,.12)}
+.holo{position:absolute;inset:0;pointer-events:none;mix-blend-mode:color-dodge;opacity:.55;
+ background:linear-gradient(115deg,
+  rgba(255,80,120,0) 18%,rgba(255,80,120,.28) 32%,rgba(255,220,120,.3) 42%,
+  rgba(120,255,190,.3) 52%,rgba(74,149,255,.42) 62%,rgba(190,120,255,.3) 72%,rgba(190,120,255,0) 86%);
+ background-size:260% 260%;background-position:var(--shx,50%) 50%}
+.scan{position:absolute;inset:0;pointer-events:none;opacity:.25;
+ background:repeating-linear-gradient(0deg,transparent 0 3px,rgba(255,255,255,.03) 3px 4px)}
+.tk-top{padding:30px 26px 22px;text-align:center;border-bottom:1px dashed rgba(74,149,255,.4);position:relative}
+.tk-top::before,.tk-top::after{content:"";position:absolute;bottom:-11px;width:22px;height:22px;border-radius:50%;
+ background:var(--bg);border:1px solid rgba(74,149,255,.45)}
+.tk-top::before{left:-12px}
+.tk-top::after{right:-12px}
+.logo{width:56%;margin-bottom:16px}
+.admit{display:inline-block;font-family:'Space Grotesk',sans-serif;font-size:10px;letter-spacing:.5em;text-indent:.5em;
+ color:var(--blue2);border:1px solid rgba(74,149,255,.5);border-radius:999px;padding:7px 14px 6px}
+.tk-mid{padding:26px;text-align:center}
+.h1{font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:500;letter-spacing:.22em;text-indent:.22em;color:#f2f6fd}
+.h2{margin-top:6px;font-size:11px;letter-spacing:.34em;text-indent:.34em;color:#5f7292}
+.rows{margin-top:24px;display:grid;grid-template-columns:1fr 1fr;gap:16px 10px;text-align:left}
+.rows .full{grid-column:1/-1}
+.k{font-family:'Space Grotesk',sans-serif;font-size:9px;letter-spacing:.36em;color:#5a6d8c}
+.v{margin-top:4px;font-size:15px;color:#e8eefb;font-weight:400}
+.v small{font-size:12px;color:#8fa2c0}
+.tk-bot{padding:20px 26px 26px;display:flex;flex-direction:column;align-items:center;gap:12px}
+.barcode{width:78%;height:44px;
+ background:repeating-linear-gradient(90deg,#cfe0ff 0 2px,transparent 2px 5px,#cfe0ff 5px 6px,transparent 6px 11px,#cfe0ff 11px 14px,transparent 14px 17px);
+ opacity:.85;border-radius:2px}
+.serial{font-family:'Space Grotesk',sans-serif;font-size:10px;letter-spacing:.42em;color:#5a6d8c}
+.hint{margin-top:26px;font-family:'Space Grotesk',sans-serif;font-size:10px;letter-spacing:.4em;color:#43536d;
+ text-transform:uppercase;animation:hp 2.6s infinite}
+@keyframes hp{0%,100%{opacity:.35}50%{opacity:1}}
+.rsvp-open{display:block;width:min(88vw,350px);margin:30px auto 0;padding:16px 0;border-radius:12px;
+ background:linear-gradient(135deg,var(--blue),#2f6fd6);color:#071021;border:none;cursor:pointer;
+ font-family:'Space Grotesk','IBM Plex Sans KR',sans-serif;font-size:13px;font-weight:600;letter-spacing:.4em;text-indent:.4em;
+ box-shadow:0 12px 34px rgba(74,149,255,.3)}
+.sheet{position:fixed;inset:0;background:rgba(4,7,12,.75);backdrop-filter:blur(8px);display:none;
+ align-items:flex-end;justify-content:center;z-index:50}
+.sheet.on{display:flex}
+.panel{width:100%;max-width:480px;background:var(--panel);border:1px solid rgba(74,149,255,.35);border-bottom:none;
+ border-radius:20px 20px 0 0;padding:30px 26px calc(30px + env(safe-area-inset-bottom));max-height:88svh;overflow-y:auto;
+ animation:up .35s cubic-bezier(.2,.8,.2,1)}
+@keyframes up{from{transform:translateY(60px);opacity:0}to{transform:none;opacity:1}}
+.panel h2{font-family:'Space Grotesk',sans-serif;font-size:13px;letter-spacing:.46em;text-indent:.46em;color:var(--blue2);
+ text-align:center;margin-bottom:6px}
+.note{font-size:11.5px;color:#66789a;text-align:center;margin-bottom:22px;line-height:1.8}
+.field{margin-bottom:15px}
+.field label{display:block;font-size:10.5px;letter-spacing:.24em;color:#7d90b2;margin-bottom:7px}
+.field input,.field textarea{width:100%;background:#0d1320;border:1px solid #2a3a55;border-radius:10px;
+ padding:13px 14px;color:#e8eefb;font-family:inherit;font-size:15px;outline:none}
+.field input:focus,.field textarea:focus{border-color:var(--blue)}
+.choice{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.choice input{display:none}
+.choice span{display:block;text-align:center;padding:13px 6px;border:1px solid #2a3a55;border-radius:10px;
+ font-size:13px;color:#8fa2c0;cursor:pointer;background:#0d1320}
+.choice input:checked+span{border-color:var(--blue);color:var(--blue2);background:rgba(74,149,255,.1)}
+.submit{width:100%;margin-top:8px;padding:16px 0;border-radius:12px;border:none;cursor:pointer;
+ background:linear-gradient(135deg,var(--blue),#2f6fd6);color:#071021;font-family:inherit;font-weight:600;font-size:14px;letter-spacing:.3em;text-indent:.3em}
+.close{display:block;margin:16px auto 0;background:none;border:none;color:#4d5f7e;font-size:11px;letter-spacing:.3em;cursor:pointer;font-family:inherit}
+.done{text-align:center;padding:34px 0 20px;display:none}
+.done .big{font-family:'Space Grotesk',sans-serif;font-size:18px;letter-spacing:.34em;color:var(--blue2);margin-bottom:14px}
+.done p{font-size:13px;color:#8fa2c0;line-height:2}
+.foot{text-align:center;font-family:'Space Grotesk',sans-serif;font-size:9px;letter-spacing:.34em;color:#33415c;padding-bottom:40px}
+</style>
+</head>
+<body>
+<div class="grid-bg"></div>
+<div class="stage">
+  <div class="ticket" id="ticket">
+    <div class="tk">
+      <div class="tk-top">
+        <img class="logo" src="../assets/logo-white.png" alt="1%CLUB">
+        <div class="admit">ADMIT ONE · VIP</div>
+      </div>
+      <div class="tk-mid">
+        <div class="h1">VIP DINNER</div>
+        <div class="h2">SECRET INVITATION</div>
+        <div class="rows">
+          <div><div class="k">DATE</div><div class="v">2026. 8. 28 <small>FRI</small></div></div>
+          <div><div class="k">TIME</div><div class="v">7:00 PM</div></div>
+          <div class="full"><div class="k">PLACE</div><div class="v">최선상회 <small>· 서울 성동구 장터길 38-1</small></div></div>
+          <div class="full"><div class="k">HOST</div><div class="v"><small>1%CLUB 김준형</small></div></div>
+        </div>
+      </div>
+      <div class="tk-bot">
+        <div class="barcode"></div>
+        <div class="serial">NO. 2026-0828-001</div>
+      </div>
+      <div class="holo"></div>
+      <div class="scan"></div>
+    </div>
+  </div>
+  <div class="hint">TILT YOUR PHONE</div>
+  <button class="rsvp-open" onclick="openSheet()">RSVP</button>
+</div>
+
+<div class="sheet" id="sheet">
+  <div class="panel">
+    <div id="formWrap">
+      <h2>RSVP</h2>
+      <p class="note">좌석이 한정되어 있어 조기 마감될 수 있습니다.<br>참석 여부를 남겨주시면 확정 안내를 드립니다.</p>
+      <form id="rsvp" action="https://docs.google.com/forms/d/e/1FAIpQLSfRes3Ovq3e8JnzYNy0iBGg8RvgpxpMckgQgIQihBntAJuZFQ/formResponse"
+            method="POST" target="gframe">
+        <div class="field"><label>성함</label>
+          <input name="entry.218985598" required autocomplete="name" placeholder="성함을 입력해주세요"></div>
+        <div class="field"><label>연락처</label>
+          <input name="entry.168467083" required autocomplete="tel" inputmode="tel" placeholder="010-0000-0000"></div>
+        <div class="field"><label>참석 여부</label>
+          <div class="choice">
+            <label><input type="radio" name="entry.68671262" value="참석합니다" required><span>참석합니다</span></label>
+            <label><input type="radio" name="entry.68671262" value="아쉽지만 참석이 어렵습니다"><span>참석이 어렵습니다</span></label>
+          </div></div>
+        <div class="field"><label>식이 제한 · 알레르기 (선택)</label>
+          <input name="entry.608571734" placeholder="예: 갑각류 알레르기"></div>
+        <div class="field"><label>남기실 메시지 (선택)</label>
+          <textarea name="entry.2015678768" rows="2"></textarea></div>
+        <input type="hidden" name="entry.1439836650" value="HOLO">
+        <button type="submit" class="submit">참석 여부 보내기</button>
+      </form>
+      <button class="close" onclick="closeSheet()">닫기</button>
+    </div>
+    <div class="done" id="done">
+      <div class="big">CONFIRMED</div>
+      <p>회신이 전달되었습니다.<br>확정 안내를 곧 보내드리겠습니다.</p>
+      <button class="close" onclick="closeSheet()">닫기</button>
+    </div>
+  </div>
+</div>
+<iframe name="gframe" style="display:none"></iframe>
+<div class="foot">1%CLUB · PRIVATE DINNER SERIES</div>
+
+<script>
+const tk=document.getElementById('ticket');
+let rx=0,ry=0,idle=true,lastTouch=0,t0=performance.now(),crx=0,cry=0;
+function setT(nx,ny){ry=nx*18;rx=-ny*15;idle=false;lastTouch=performance.now();}
+document.querySelector('.stage').addEventListener('pointermove',e=>{
+  const r=tk.getBoundingClientRect();
+  setT((e.clientX-(r.left+r.width/2))/r.width,(e.clientY-(r.top+r.height/2))/r.height);
+});
+window.addEventListener('deviceorientation',e=>{
+  if(e.gamma==null)return;
+  setT(Math.max(-1,Math.min(1,e.gamma/28)),Math.max(-1,Math.min(1,(e.beta-45)/38)));
+});
+(function loop(now){
+  const t=(now-t0)/1000;
+  if(performance.now()-lastTouch>2500)idle=true;
+  if(idle){ry=Math.sin(t*.75)*11;rx=Math.cos(t*.6)*7;}
+  crx+=(rx-crx)*.09;cry+=(ry-cry)*.09;
+  tk.style.transform=`rotateX(${crx}deg) rotateY(${cry}deg)`;
+  document.querySelector('.holo').style.setProperty('--shx',(50+cry*4)+'%');
+  requestAnimationFrame(loop);
+})(t0);
+function openSheet(){document.getElementById('sheet').classList.add('on')}
+function closeSheet(){document.getElementById('sheet').classList.remove('on')}
+document.getElementById('rsvp').addEventListener('submit',()=>{
+  setTimeout(()=>{document.getElementById('formWrap').style.display='none';
+    document.getElementById('done').style.display='block';},600);
+});
+</script>
+</body>
+</html>
