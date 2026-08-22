@@ -211,6 +211,14 @@ document.getElementById('rsvp').addEventListener('submit',()=>{
   setTimeout(()=>{document.getElementById('formWrap').style.display='none';
     document.getElementById('done').style.display='block';},600);
 });
+
+new MutationObserver(()=>{
+  if(document.body.classList.contains('rsvp-ready')&&!window.__rsvpScrolled){
+    window.__rsvpScrolled=true;
+    setTimeout(()=>{const b=document.querySelector('.rsvp-open');
+      if(b)b.scrollIntoView({behavior:'smooth',block:'center'});},1000);
+  }
+}).observe(document.body,{attributes:true,attributeFilter:['class']});
 </script>
 </body>
 </html>
