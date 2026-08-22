@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>1%CLUB VIP DINNER — Invitation</title>
+<meta property="og:title" content="1%CLUB VIP DINNER">
+<meta property="og:description" content="사진이 현상되는 중. 2026. 8. 28 FRI 8PM–10:30PM">
+<meta name="theme-color" content="#141210">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Cormorant+Garamond:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+:root{--warm:#e8b872;--bg:#141210}
+body{background:var(--bg);color:#ece5d8;font-family:'Pretendard Variable',Pretendard,sans-serif;overflow-x:hidden;
+  background:radial-gradient(900px 620px at 50% -8%,#232019 0%,#141210 62%)}
+.stage{min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:48px 24px}
+.eyebrow{font-family:'Cormorant Garamond',serif;font-size:11px;letter-spacing:.5em;text-indent:.5em;color:#b3966b;margin-bottom:26px}
+.pola{width:min(80vw,320px);background:#faf7ef;border-radius:6px;padding:14px 14px 0;cursor:pointer;
+  box-shadow:0 26px 70px rgba(0,0,0,.65);transform:rotate(-2.5deg);transition:transform .5s}
+.pola:active{transform:rotate(-1deg) scale(.99)}
+.photo{position:relative;aspect-ratio:4/4.4;border-radius:3px;overflow:hidden;
+  background:linear-gradient(165deg,#241d14 0%,#191410 55%,#26201a 100%)}
+.scene{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:22px;text-align:center;
+  filter:blur(14px) saturate(.4) brightness(.55);opacity:.35;transition:filter 2.4s ease,opacity 2.4s ease}
+body.dev .scene{filter:blur(0) saturate(1) brightness(1);opacity:1}
+.scene img{width:64%;filter:drop-shadow(0 2px 8px rgba(232,184,114,.35))}
+.scene .rule{width:40px;height:1px;background:linear-gradient(90deg,transparent,var(--warm),transparent)}
+.scene .t{font-family:'Cormorant Garamond',serif;font-size:13px;letter-spacing:.42em;text-indent:.42em;color:#f0d7a8}
+.scene .d{font-size:10.5px;letter-spacing:.24em;text-indent:.24em;color:#b39d78}
+.caption{height:74px;display:flex;align-items:center;justify-content:center;
+  font-family:'Caveat',cursive;font-size:23px;color:#494336;transform:rotate(-.6deg)}
+.hint{margin-top:26px;font-size:11px;letter-spacing:.35em;color:#6e6654;text-transform:uppercase;animation:pulse 2.6s infinite}
+@keyframes pulse{0%,100%{opacity:.4}50%{opacity:1}}
+.info{width:min(88vw,340px);margin-top:32px;text-align:center;opacity:0;transform:translateY(14px);transition:opacity 1.2s ease .8s,transform 1.2s ease .8s}
+body.dev .info{opacity:1;transform:none}
+.copy{font-size:13px;font-weight:300;line-height:2.05;color:#d8cfbe;word-break:keep-all}
+.detail{margin-top:20px;display:grid;gap:11px}
+.detail .k{font-size:9px;letter-spacing:.4em;color:#847455;text-indent:.4em;margin-bottom:2px}
+.detail .v{font-family:'Cormorant Garamond','Pretendard Variable',serif;font-size:16px;color:#f2e6cc}
+.detail .v small{font-size:11.5px;color:#ab9a79}
+.host{margin-top:18px;font-size:10.5px;letter-spacing:.18em;color:#95855f}
+.rsvp-open{display:block;width:min(88vw,340px);margin:30px auto 0;padding:17px 0;border-radius:999px;
+  background:linear-gradient(135deg,#e9c17e,#a97f3f);color:#161005;border:none;font-family:inherit;
+  font-size:14px;letter-spacing:.35em;text-indent:.35em;cursor:pointer;box-shadow:0 10px 30px rgba(232,184,114,.22)}
+.sheet{position:fixed;inset:0;background:rgba(7,6,4,.74);backdrop-filter:blur(8px);display:none;align-items:flex-end;justify-content:center;z-index:50}
+.sheet.on{display:flex}
+.panel{width:100%;max-width:480px;background:#1a1712;border:1px solid rgba(232,184,114,.3);border-bottom:none;
+  border-radius:22px 22px 0 0;padding:30px 26px calc(30px + env(safe-area-inset-bottom));max-height:88svh;overflow-y:auto;animation:up .35s cubic-bezier(.2,.8,.2,1)}
+@keyframes up{from{transform:translateY(60px);opacity:0}to{transform:none;opacity:1}}
+.panel h2{font-family:'Cormorant Garamond',serif;font-size:14px;letter-spacing:.45em;text-indent:.45em;color:#f0d7a8;text-align:center;margin-bottom:6px}
+.panel .note{font-size:11.5px;color:#867758;text-align:center;margin-bottom:22px;line-height:1.8}
+.field{margin-bottom:16px}
+.field label{display:block;font-size:10.5px;letter-spacing:.22em;color:#a08c62;margin-bottom:7px}
+.field input{width:100%;background:#242017;border:1px solid #3a3222;border-radius:10px;padding:13px 14px;color:#f2ead8;font-family:inherit;font-size:15px;outline:none}
+.field input:focus{border-color:var(--warm)}
+.choice{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.choice input{display:none}
+.choice span{display:block;text-align:center;padding:13px 6px;border:1px solid #3a3222;border-radius:10px;font-size:13px;color:#b5a480;cursor:pointer}
+.choice input:checked+span{border-color:var(--warm);color:#f0d7a8;background:rgba(232,184,114,.1)}
+.submit{width:100%;margin-top:8px;padding:16px 0;border-radius:12px;border:none;cursor:pointer;
+  background:linear-gradient(135deg,#e9c17e,#a97f3f);color:#161005;font-family:inherit;font-size:14px;letter-spacing:.3em;text-indent:.3em}
+.close{display:block;margin:16px auto 0;background:none;border:none;color:#6f6244;font-size:11px;letter-spacing:.3em;cursor:pointer;font-family:inherit}
+.done{text-align:center;padding:34px 0 20px;display:none}
+.done .big{font-family:'Cormorant Garamond',serif;font-size:20px;letter-spacing:.3em;color:#f0d7a8;margin-bottom:14px}
+.done p{font-size:13px;color:#b5a480;line-height:2}
+.foot{text-align:center;font-size:10px;letter-spacing:.3em;color:#453e2f;padding-bottom:40px}
+</style>
+</head>
+<body>
+<div class="stage">
+  <div class="eyebrow">A NIGHT TO DEVELOP</div>
+  <div class="pola" id="pola">
+    <div class="photo">
+      <div class="scene">
+        <img src="../assets/logo-white.png" alt="1%CLUB">
+        <div class="rule"></div>
+        <div class="t">SECRET INVITATION</div>
+        <div class="d">VIP DINNER · SEOUL</div>
+      </div>
+    </div>
+    <div class="caption">8. 28. our night ✳</div>
+  </div>
+  <div class="hint" id="hint">TAP TO DEVELOP</div>
+  <div class="info">
+    <p class="copy">시간이 지나야 선명해지는 것들이 있습니다.<br>그날의 장면에 당신을 초대합니다.</p>
+    <div class="detail">
+      <div><div class="k">DATE</div><div class="v">2026. 8. 28 <small>FRI · 8:00 PM – 10:30 PM</small></div></div>
+      <div><div class="k">PLACE</div><div class="v">최선상회</div></div>
+      <div><div class="k">ADDRESS</div><div class="v"><small>서울 성동구 장터길 38-1</small></div></div>
+    </div>
+    <div class="host">host. 1%CLUB 김준형</div>
+  </div>
+  <button class="rsvp-open" onclick="openSheet()">R S V P</button>
+</div>
+
+<div class="sheet" id="sheet">
+  <div class="panel">
+    <div id="formWrap">
+      <h2>RSVP</h2>
+      <p class="note">좌석이 한정되어 있어 조기 마감될 수 있습니다.<br>아래 내용을 남겨주시면 확정 안내를 드립니다.</p>
+      <form id="rsvp" action="https://docs.google.com/forms/d/e/1FAIpQLSddsV6gYgW3Kfnzry5Cp3gtOZDgGaNMDZUKG9sHznGi60rTkg/formResponse" method="POST" target="gframe">
+        <div class="field"><label>이름</label>
+          <input name="entry.1633263028" required autocomplete="name" placeholder="이름을 입력해주세요"></div>
+        <div class="field"><label>성별</label>
+          <div class="choice">
+            <label><input type="radio" name="entry.1817100511" value="남" required><span>남</span></label>
+            <label><input type="radio" name="entry.1817100511" value="여"><span>여</span></label>
+          </div></div>
+        <div class="field"><label>MBTI</label>
+          <input name="entry.734525497" required placeholder="예: ENFP" maxlength="4" style="text-transform:uppercase"></div>
+        <div class="field"><label>연락처</label>
+          <input name="entry.826452057" required autocomplete="tel" inputmode="tel" placeholder="010-0000-0000"></div>
+        <div class="field"><label>솔로 여부</label>
+          <div class="choice">
+            <label><input type="radio" name="entry.1556673927" value="솔로입니다" required><span>솔로입니다</span></label>
+            <label><input type="radio" name="entry.1556673927" value="솔로가 아닙니다"><span>솔로가 아닙니다</span></label>
+          </div></div>
+        <div class="field"><label>럭키드로우 협찬 품목 <small style="letter-spacing:0;opacity:.6">(선택 · 1인당 최대 2개)</small></label>
+          <input name="entry.558269791" placeholder="협찬하실 품목 (최대 2개)"></div>
+        <div class="field"><label>대관 시간 확인 <small style="letter-spacing:0;opacity:.6">저녁 8시 ~ 밤 10시 30분 · 종료 시간 엄수</small></label>
+          <div class="choice" style="grid-template-columns:1fr">
+            <label><input type="radio" name="entry.961666042" value="네, 확인했습니다" required><span>네, 확인했습니다</span></label>
+          </div></div>
+        <div class="field"><label>교통 안내 <small style="letter-spacing:0;opacity:.6">주차가 어려운 지역이에요 — 대중교통을 부탁드립니다</small></label>
+          <div class="choice" style="grid-template-columns:1fr">
+            <label><input type="radio" name="entry.97358986" value="네, 대중교통으로 방문하겠습니다" required><span>네, 대중교통으로 방문하겠습니다</span></label>
+          </div></div>
+        <input type="hidden" name="entry.974406819" value="POLAROID">
+        <button type="submit" class="submit">참석 회신 보내기</button></form>
+      <button class="close" onclick="closeSheet()">닫기</button>
+    </div>
+    <div class="done" id="done">
+      <div class="big">THANK YOU</div>
+      <p>회신이 전달되었습니다.<br>확정 안내를 곧 보내드리겠습니다.</p>
+      <button class="close" onclick="closeSheet()">닫기</button>
+    </div>
+  </div>
+</div>
+<iframe name="gframe" style="display:none"></iframe>
+<div class="foot">1%CLUB · PRIVATE DINNER SERIES</div>
+
+<script>
+document.getElementById('pola').addEventListener('click',()=>{
+  document.body.classList.add('dev');
+  document.getElementById('hint').style.opacity=.2;
+});
+function openSheet(){document.getElementById('sheet').classList.add('on')}
+function closeSheet(){document.getElementById('sheet').classList.remove('on')}
+document.getElementById('rsvp').addEventListener('submit',()=>{
+  setTimeout(()=>{document.getElementById('formWrap').style.display='none';
+    document.getElementById('done').style.display='block';},600);
+});
+</script>
+</body>
+</html>

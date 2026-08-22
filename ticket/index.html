@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>1%CLUB VIP DINNER — Invitation</title>
+<meta property="og:title" content="1%CLUB VIP DINNER">
+<meta property="og:description" content="BOARDING 8PM SHARP. 2026. 8. 28 FRI 8PM–10:30PM">
+<meta name="theme-color" content="#101623">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/variable/woff2/SUIT-Variable.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+:root{--navy:#17233c;--navy2:#0f1830;--cream:#f5efe1;--acc:#c9553a;--bg:#101623}
+body{background:var(--bg);color:var(--cream);font-family:'SUIT Variable',sans-serif;overflow-x:hidden;
+  background:radial-gradient(900px 620px at 50% -8%,#1b2436 0%,#101623 62%)}
+.stage{min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:48px 20px}
+.eyebrow{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.42em;text-indent:.42em;color:#7d90b5;margin-bottom:26px}
+.pass{width:min(92vw,380px);border-radius:18px;overflow:hidden;box-shadow:0 26px 70px rgba(0,0,0,.6);transform:rotate(-1deg)}
+.top{background:var(--cream);color:#1c2438;padding:22px 22px 18px}
+.rowa{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+.rowa img{width:120px;filter:invert(88%) sepia(8%) saturate(300%) brightness(.35)}
+.rowa .cls{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.3em;color:var(--acc);border:1px solid var(--acc);border-radius:6px;padding:5px 8px}
+.route{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.route .code{font-family:'IBM Plex Mono',monospace;font-size:34px;font-weight:600;letter-spacing:.02em}
+.route .city{font-size:10px;letter-spacing:.18em;color:#67718c;margin-top:3px}
+.route .plane{flex:1;text-align:center;color:#9aa5c0;font-size:12px;position:relative}
+.route .plane::before,.route .plane::after{content:"";position:absolute;top:50%;width:34%;border-top:1px dashed #b9c0d4}
+.route .plane::before{left:0}.route .plane::after{right:0}
+.grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-top:18px}
+.grid .k{font-family:'IBM Plex Mono',monospace;font-size:8.5px;letter-spacing:.22em;color:#8b94ad;margin-bottom:3px}
+.grid .v{font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:500;color:#1c2438}
+.notice{margin-top:14px;font-size:10.5px;color:#77819c;line-height:1.7;word-break:keep-all}
+.tear{position:relative;height:0;border-top:2px dashed #c8bfa8;background:var(--cream)}
+.tear::before,.tear::after{content:"";position:absolute;top:-11px;width:22px;height:22px;border-radius:50%;background:var(--bg)}
+.tear::before{left:-11px}.tear::after{right:-11px}
+.stub{background:var(--cream);color:#1c2438;padding:18px 22px 22px;position:relative;
+  transition:transform .9s cubic-bezier(.5,.05,.3,1),opacity .9s}
+.stub .srow{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.stub .barcode{height:44px;flex:1;background:repeating-linear-gradient(90deg,#1c2438 0 2px,transparent 2px 5px,#1c2438 5px 6px,transparent 6px 10px)}
+.stub .seat{font-family:'IBM Plex Mono',monospace;text-align:right}
+.stub .seat .k{font-size:8.5px;letter-spacing:.22em;color:#8b94ad}
+.stub .seat .v{font-size:22px;font-weight:600}
+body.torn .stub{transform:translateY(26px) rotate(4deg)}
+.hint{margin-top:26px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.3em;color:#5d6b8c;text-transform:uppercase;animation:pulse 2.6s infinite}
+@keyframes pulse{0%,100%{opacity:.4}50%{opacity:1}}
+.welcome{width:min(92vw,380px);margin-top:30px;text-align:center;font-size:13px;font-weight:300;line-height:2.05;color:#c4cde0;
+  opacity:0;transform:translateY(12px);transition:opacity 1s ease .3s,transform 1s ease .3s;word-break:keep-all}
+body.torn .welcome{opacity:1;transform:none}
+.host{margin-top:12px;font-size:10.5px;letter-spacing:.18em;color:#8b96b3}
+.rsvp-open{display:block;width:min(92vw,380px);margin:30px auto 0;padding:17px 0;border-radius:999px;
+  background:linear-gradient(135deg,#e0684a,#a83c24);color:#fff5ec;border:none;font-family:inherit;font-weight:600;
+  font-size:13.5px;letter-spacing:.35em;text-indent:.35em;cursor:pointer;box-shadow:0 10px 30px rgba(201,85,58,.3)}
+.sheet{position:fixed;inset:0;background:rgba(6,9,16,.78);backdrop-filter:blur(8px);display:none;align-items:flex-end;justify-content:center;z-index:50}
+.sheet.on{display:flex}
+.panel{width:100%;max-width:480px;background:#141c2e;border:1px solid rgba(201,85,58,.35);border-bottom:none;
+  border-radius:22px 22px 0 0;padding:30px 26px calc(30px + env(safe-area-inset-bottom));max-height:88svh;overflow-y:auto;animation:up .35s cubic-bezier(.2,.8,.2,1)}
+@keyframes up{from{transform:translateY(60px);opacity:0}to{transform:none;opacity:1}}
+.panel h2{font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.4em;text-indent:.4em;color:#f2c4b5;text-align:center;margin-bottom:6px}
+.panel .note{font-size:11.5px;color:#77819c;text-align:center;margin-bottom:22px;line-height:1.8}
+.field{margin-bottom:16px}
+.field label{display:block;font-size:10.5px;letter-spacing:.2em;color:#93a0be;margin-bottom:7px}
+.field input{width:100%;background:#1b2438;border:1px solid #2d3a56;border-radius:10px;padding:13px 14px;color:#eef2fb;font-family:inherit;font-size:15px;outline:none}
+.field input:focus{border-color:var(--acc)}
+.choice{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.choice input{display:none}
+.choice span{display:block;text-align:center;padding:13px 6px;border:1px solid #2d3a56;border-radius:10px;font-size:13px;color:#9daac8;cursor:pointer}
+.choice input:checked+span{border-color:var(--acc);color:#ffd9cc;background:rgba(201,85,58,.14)}
+.submit{width:100%;margin-top:8px;padding:16px 0;border-radius:12px;border:none;cursor:pointer;
+  background:linear-gradient(135deg,#e0684a,#a83c24);color:#fff5ec;font-family:inherit;font-weight:600;font-size:13.5px;letter-spacing:.3em;text-indent:.3em}
+.close{display:block;margin:16px auto 0;background:none;border:none;color:#5f6b88;font-size:11px;letter-spacing:.3em;cursor:pointer;font-family:inherit}
+.done{text-align:center;padding:34px 0 20px;display:none}
+.done .big{font-family:'IBM Plex Mono',monospace;font-size:17px;letter-spacing:.3em;color:#f2c4b5;margin-bottom:14px}
+.done p{font-size:13px;color:#9daac8;line-height:2}
+.foot{text-align:center;font-size:10px;letter-spacing:.3em;color:#39435c;padding-bottom:40px}
+</style>
+</head>
+<body>
+<div class="stage">
+  <div class="eyebrow">BOARDING PASS · PRIVATE TABLE</div>
+  <div class="pass" id="pass">
+    <div class="top">
+      <div class="rowa"><img src="../assets/logo-white.png" alt="1%CLUB"><span class="cls">VIP CLASS</span></div>
+      <div class="route">
+        <div><div class="code">YOU</div><div class="city">WHEREVER YOU ARE</div></div>
+        <div class="plane">✈</div>
+        <div style="text-align:right"><div class="code">CSH</div><div class="city">최선상회 · SEOUL</div></div>
+      </div>
+      <div class="grid">
+        <div><div class="k">DATE</div><div class="v">28 AUG FRI</div></div>
+        <div><div class="k">BOARDING</div><div class="v">8:00 PM</div></div>
+        <div><div class="k">ARRIVAL ENDS</div><div class="v">10:30 PM</div></div>
+        <div><div class="k">GATE</div><div class="v">장터길 38-1</div></div>
+        <div><div class="k">HOST</div><div class="v">1%CLUB BK</div></div>
+        <div><div class="k">DRESS</div><div class="v">SMART FRI</div></div>
+      </div>
+      <div class="notice">종료 시간(10:30 PM)은 엄수됩니다 · 주차가 어려운 지역으로 대중교통 이용을 부탁드립니다</div>
+    </div>
+    <div class="tear"></div>
+    <div class="stub">
+      <div class="srow">
+        <div class="barcode"></div>
+        <div class="seat"><div class="k">SEAT</div><div class="v">1%</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="hint" id="hint">TAP TO TEAR THE STUB</div>
+  <p class="welcome">티켓은 한 장, 좌석은 하나.<br>당신을 위한 저녁 비행이 준비되어 있습니다.</p>
+  <button class="rsvp-open" onclick="openSheet()">R S V P</button>
+</div>
+
+<div class="sheet" id="sheet">
+  <div class="panel">
+    <div id="formWrap">
+      <h2>RSVP</h2>
+      <p class="note">좌석이 한정되어 있어 조기 마감될 수 있습니다.<br>아래 내용을 남겨주시면 확정 안내를 드립니다.</p>
+      <form id="rsvp" action="https://docs.google.com/forms/d/e/1FAIpQLSddsV6gYgW3Kfnzry5Cp3gtOZDgGaNMDZUKG9sHznGi60rTkg/formResponse" method="POST" target="gframe">
+        <div class="field"><label>이름</label>
+          <input name="entry.1633263028" required autocomplete="name" placeholder="이름을 입력해주세요"></div>
+        <div class="field"><label>성별</label>
+          <div class="choice">
+            <label><input type="radio" name="entry.1817100511" value="남" required><span>남</span></label>
+            <label><input type="radio" name="entry.1817100511" value="여"><span>여</span></label>
+          </div></div>
+        <div class="field"><label>MBTI</label>
+          <input name="entry.734525497" required placeholder="예: ENFP" maxlength="4" style="text-transform:uppercase"></div>
+        <div class="field"><label>연락처</label>
+          <input name="entry.826452057" required autocomplete="tel" inputmode="tel" placeholder="010-0000-0000"></div>
+        <div class="field"><label>솔로 여부</label>
+          <div class="choice">
+            <label><input type="radio" name="entry.1556673927" value="솔로입니다" required><span>솔로입니다</span></label>
+            <label><input type="radio" name="entry.1556673927" value="솔로가 아닙니다"><span>솔로가 아닙니다</span></label>
+          </div></div>
+        <div class="field"><label>럭키드로우 협찬 품목 <small style="letter-spacing:0;opacity:.6">(선택 · 1인당 최대 2개)</small></label>
+          <input name="entry.558269791" placeholder="협찬하실 품목 (최대 2개)"></div>
+        <div class="field"><label>대관 시간 확인 <small style="letter-spacing:0;opacity:.6">저녁 8시 ~ 밤 10시 30분 · 종료 시간 엄수</small></label>
+          <div class="choice" style="grid-template-columns:1fr">
+            <label><input type="radio" name="entry.961666042" value="네, 확인했습니다" required><span>네, 확인했습니다</span></label>
+          </div></div>
+        <div class="field"><label>교통 안내 <small style="letter-spacing:0;opacity:.6">주차가 어려운 지역이에요 — 대중교통을 부탁드립니다</small></label>
+          <div class="choice" style="grid-template-columns:1fr">
+            <label><input type="radio" name="entry.97358986" value="네, 대중교통으로 방문하겠습니다" required><span>네, 대중교통으로 방문하겠습니다</span></label>
+          </div></div>
+        <input type="hidden" name="entry.974406819" value="TICKET">
+        <button type="submit" class="submit">참석 회신 보내기</button></form>
+      <button class="close" onclick="closeSheet()">닫기</button>
+    </div>
+    <div class="done" id="done">
+      <div class="big">CHECKED-IN</div>
+      <p>회신이 전달되었습니다.<br>확정 안내를 곧 보내드리겠습니다.</p>
+      <button class="close" onclick="closeSheet()">닫기</button>
+    </div>
+  </div>
+</div>
+<iframe name="gframe" style="display:none"></iframe>
+<div class="foot">1%CLUB · PRIVATE DINNER SERIES</div>
+
+<script>
+document.getElementById('pass').addEventListener('click',()=>{
+  document.body.classList.toggle('torn');
+  document.getElementById('hint').style.opacity=.2;
+});
+function openSheet(){document.getElementById('sheet').classList.add('on')}
+function closeSheet(){document.getElementById('sheet').classList.remove('on')}
+document.getElementById('rsvp').addEventListener('submit',()=>{
+  setTimeout(()=>{document.getElementById('formWrap').style.display='none';
+    document.getElementById('done').style.display='block';},600);
+});
+</script>
+</body>
+</html>
