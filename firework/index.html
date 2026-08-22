@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>1%CLUB VIP DINNER — Invitation</title>
+<meta property="og:title" content="1%CLUB VIP DINNER">
+<meta property="og:description" content="밤하늘에 축포를 쏘세요. 2026. 8. 28 FRI 8PM–10:30PM">
+<meta name="theme-color" content="#07070d">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/variable/woff2/SUIT-Variable.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+:root{--gold:#f5d98a;--bg:#07070d}
+body{background:var(--bg);color:#efeadf;font-family:'SUIT Variable',sans-serif;overflow-x:hidden}
+canvas#fw{position:fixed;inset:0;z-index:0}
+.stage{position:relative;z-index:2;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:48px 24px;pointer-events:none}
+.counter{font-family:'Cormorant Garamond',serif;font-size:12px;letter-spacing:.4em;text-indent:.4em;color:#8a8268;margin-bottom:16px;transition:opacity .6s}
+body.lit3 .counter{opacity:0}
+.invite{width:min(88vw,350px);text-align:center;opacity:0;transform:translateY(14px);transition:opacity 1.3s ease .3s,transform 1.3s ease .3s}
+body.lit3 .invite{opacity:1;transform:none;pointer-events:auto}
+.eyebrow{font-family:'Cormorant Garamond',serif;font-size:11px;letter-spacing:.5em;text-indent:.5em;color:var(--gold);margin-bottom:16px}
+.logo{width:114px;margin-bottom:16px;filter:drop-shadow(0 1px 10px rgba(245,217,138,.4))}
+.copy{font-size:13px;font-weight:300;line-height:2.1;color:#ded6c2;word-break:keep-all}
+.detail{margin-top:20px;display:grid;gap:11px}
+.detail .k{font-size:9px;letter-spacing:.42em;color:#7d7458;text-indent:.42em;margin-bottom:2px}
+.detail .v{font-family:'Cormorant Garamond','SUIT Variable',serif;font-size:16.5px;color:#f7ecca}
+.detail .v small{font-size:11.5px;color:#aca17e}
+.host{margin-top:18px;font-size:10.5px;letter-spacing:.18em;color:#958962}
+.hint{position:fixed;left:0;right:0;bottom:110px;z-index:2;text-align:center;font-size:11px;letter-spacing:.35em;
+  color:#5f5a48;text-transform:uppercase;animation:pulse 2.6s infinite;pointer-events:none;transition:opacity .6s}
+body.lit3 .hint{opacity:0}
+@keyframes pulse{0%,100%{opacity:.4}50%{opacity:1}}
+.rsvp-open{display:block;width:min(88vw,350px);margin:28px auto 0;padding:17px 0;border-radius:999px;border:none;cursor:pointer;
+  background:linear-gradient(135deg,#f7dd96,#bd9648);color:#181204;font-family:inherit;font-weight:600;
+  font-size:13.5px;letter-spacing:.35em;text-indent:.35em;box-shadow:0 10px 30px rgba(245,217,138,.25)}
+.sheet{position:fixed;inset:0;background:rgba(3,3,7,.8);backdrop-filter:blur(8px);display:none;align-items:flex-end;justify-content:center;z-index:50}
+.sheet.on{display:flex}
+.panel{width:100%;max-width:480px;background:#101018;border:1px solid rgba(245,217,138,.3);border-bottom:none;
+  border-radius:22px 22px 0 0;padding:30px 26px calc(30px + env(safe-area-inset-bottom));max-height:88svh;overflow-y:auto;animation:up .35s cubic-bezier(.2,.8,.2,1)}
+@keyframes up{from{transform:translateY(60px);opacity:0}to{transform:none;opacity:1}}
+.panel h2{font-family:'Cormorant Garamond',serif;font-size:14px;letter-spacing:.45em;text-indent:.45em;color:#f7ecca;text-align:center;margin-bottom:6px}
+.panel .note{font-size:11.5px;color:#7f7960;text-align:center;margin-bottom:22px;line-height:1.8}
+.field{margin-bottom:16px}
+.field label{display:block;font-size:10.5px;letter-spacing:.22em;color:#9c9270;margin-bottom:7px}
+.field input{width:100%;background:#1a1a24;border:1px solid #2e2e3c;border-radius:10px;padding:13px 14px;color:#f0ead8;font-family:inherit;font-size:15px;outline:none}
+.field input:focus{border-color:var(--gold)}
+.choice{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.choice input{display:none}
+.choice span{display:block;text-align:center;padding:13px 6px;border:1px solid #2e2e3c;border-radius:10px;font-size:13px;color:#aba283;cursor:pointer}
+.choice input:checked+span{border-color:var(--gold);color:#f7ecca;background:rgba(245,217,138,.1)}
+.submit{width:100%;margin-top:8px;padding:16px 0;border-radius:12px;border:none;cursor:pointer;
+  background:linear-gradient(135deg,#f7dd96,#bd9648);color:#181204;font-family:inherit;font-weight:600;font-size:13.5px;letter-spacing:.3em;text-indent:.3em}
+.close{display:block;margin:16px auto 0;background:none;border:none;color:#6c6650;font-size:11px;letter-spacing:.3em;cursor:pointer;font-family:inherit}
+.done{text-align:center;padding:34px 0 20px;display:none}
+.done .big{font-family:'Cormorant Garamond',serif;font-size:20px;letter-spacing:.3em;color:#f7ecca;margin-bottom:14px}
+.done p{font-size:13px;color:#aba283;line-height:2}
+.foot{position:relative;z-index:2;text-align:center;font-size:10px;letter-spacing:.3em;color:#3d3a2e;padding-bottom:40px;pointer-events:none}
+</style>
+</head>
+<body>
+<canvas id="fw"></canvas>
+<div class="stage">
+  <div class="counter" id="counter">FIRE 3 SHOTS · 0 / 3</div>
+  <div class="invite">
+    <div class="eyebrow">A NIGHT WORTH CELEBRATING</div>
+    <img class="logo" src="../assets/logo-white.png" alt="1%CLUB">
+    <p class="copy">축하할 일이 없어도 축포를 쏘는 밤.<br>그 소란한 즐거움에 당신을 초대합니다.</p>
+    <div class="detail">
+      <div><div class="k">DATE</div><div class="v">2026. 8. 28 <small>FRI · 8:00 PM – 10:30 PM</small></div></div>
+      <div><div class="k">PLACE</div><div class="v">최선상회</div></div>
+      <div><div class="k">ADDRESS</div><div class="v"><small>서울 성동구 장터길 38-1</small></div></div>
+    </div>
+    <div class="host">host. 1%CLUB 김준형</div>
+    <button class="rsvp-open" onclick="openSheet()">R S V P</button>
+  </div>
+</div>
+<div class="hint">밤하늘 아무 곳이나 탭 — 폭죽 3발</div>
+
+<div class="sheet" id="sheet">
+  <div class="panel">
+    <div id="formWrap">
+      <h2>RSVP</h2>
+      <p class="note">좌석이 한정되어 있어 조기 마감될 수 있습니다.<br>아래 내용을 남겨주시면 확정 안내를 드립니다.</p>
+      <form id="rsvp" action="https://docs.google.com/forms/d/e/1FAIpQLSddsV6gYgW3Kfnzry5Cp3gtOZDgGaNMDZUKG9sHznGi60rTkg/formResponse" method="POST" target="gframe">
+        <div class="field"><label>이름</label>
+          <input name="entry.1633263028" required autocomplete="name" placeholder="이름을 입력해주세요"></div>
+        <div class="field"><label>성별</label>
+          <div class="choice">
+            <label><input type="radio" name="entry.1817100511" value="남" required><span>남</span></label>
+            <label><input type="radio" name="entry.1817100511" value="여"><span>여</span></label>
+          </div></div>
+        <div class="field"><label>MBTI</label>
+          <input name="entry.734525497" required placeholder="예: ENFP" maxlength="4" style="text-transform:uppercase"></div>
+        <div class="field"><label>연락처</label>
+          <input name="entry.826452057" required autocomplete="tel" inputmode="tel" placeholder="010-0000-0000"></div>
+        <div class="field"><label>솔로 여부</label>
+          <div class="choice">
+            <label><input type="radio" name="entry.1556673927" value="솔로입니다" required><span>솔로입니다</span></label>
+            <label><input type="radio" name="entry.1556673927" value="솔로가 아닙니다"><span>솔로가 아닙니다</span></label>
+          </div></div>
+        <div class="field"><label>(희망 시) 럭키드로우 협찬 희망 품목 <small style="letter-spacing:0;opacity:.6">(1인당 최대 2개)</small></label>
+          <input name="entry.558269791" placeholder="협찬하실 품목 (최대 2개)"></div>
+        <div class="field"><label>대관 시간 확인 <small style="letter-spacing:0;opacity:.6">저녁 8시 ~ 밤 10시 30분 · 종료 시간 엄수</small></label>
+          <div class="choice" style="grid-template-columns:1fr">
+            <label><input type="radio" name="entry.961666042" value="네, 확인했습니다" required><span>네, 확인했습니다</span></label>
+          </div></div>
+        <div class="field"><label>교통 안내 <small style="letter-spacing:0;opacity:.6">주차가 어려운 지역이에요 — 대중교통을 부탁드립니다</small></label>
+          <div class="choice" style="grid-template-columns:1fr">
+            <label><input type="radio" name="entry.97358986" value="네, 대중교통으로 방문하겠습니다" required><span>네, 대중교통으로 방문하겠습니다</span></label>
+          </div></div>
+        <input type="hidden" name="entry.974406819" value="FIREWORK">
+        <button type="submit" class="submit">참석 회신 보내기</button></form>
+      <button class="close" onclick="closeSheet()">닫기</button>
+    </div>
+    <div class="done" id="done">
+      <div class="big">THANK YOU</div>
+      <p>회신이 전달되었습니다.<br>확정 안내를 곧 보내드리겠습니다.</p>
+      <button class="close" onclick="closeSheet()">닫기</button>
+    </div>
+  </div>
+</div>
+<iframe name="gframe" style="display:none"></iframe>
+<div class="foot">1%CLUB · PRIVATE DINNER SERIES</div>
+
+<script>
+const cv=document.getElementById('fw'),cx=cv.getContext('2d');
+let W,H;function rs(){W=cv.width=innerWidth*devicePixelRatio;H=cv.height=innerHeight*devicePixelRatio}
+rs();addEventListener('resize',rs);
+const HUES=[46,346,204,266,160];
+let parts=[],rockets=[],shots=0;
+function boom(x,y,hue){
+  const n=70+Math.random()*40;
+  for(let i=0;i<n;i++){
+    const a=Math.random()*6.283,v=(1+Math.random()*3.4)*devicePixelRatio;
+    parts.push({x,y,vx:Math.cos(a)*v,vy:Math.sin(a)*v,life:1,hue:hue+Math.random()*24-12,r:(1+Math.random()*1.6)*devicePixelRatio});
+  }
+}
+document.body.addEventListener('pointerdown',e=>{
+  if(e.target.closest('.sheet,.rsvp-open,.panel,form,button,input,label'))return;
+  const x=e.clientX*devicePixelRatio,ty=e.clientY*devicePixelRatio;
+  rockets.push({x,y:H+8,ty,hue:HUES[shots%HUES.length]});
+  shots++;
+  const c=document.getElementById('counter');
+  c.textContent=`FIRE 3 SHOTS · ${Math.min(shots,3)} / 3`;
+  if(shots>=3)setTimeout(()=>document.body.classList.add('lit3'),650);
+});
+(function loop(){
+  cx.fillStyle='rgba(7,7,13,.22)';cx.fillRect(0,0,W,H);
+  for(let i=rockets.length-1;i>=0;i--){
+    const r=rockets[i];r.y-=14*devicePixelRatio;
+    cx.fillStyle=`hsl(${r.hue} 90% 78%)`;
+    cx.beginPath();cx.arc(r.x,r.y,2.2*devicePixelRatio,0,6.283);cx.fill();
+    if(r.y<=r.ty){boom(r.x,r.ty,r.hue);rockets.splice(i,1);}
+  }
+  for(let i=parts.length-1;i>=0;i--){
+    const p=parts[i];
+    p.x+=p.vx;p.y+=p.vy;p.vy+=.045*devicePixelRatio;p.vx*=.985;p.vy*=.985;p.life-=.012;
+    if(p.life<=0){parts.splice(i,1);continue}
+    cx.globalAlpha=p.life;
+    cx.fillStyle=`hsl(${p.hue} 92% ${55+p.life*30}%)`;
+    cx.beginPath();cx.arc(p.x,p.y,p.r*p.life,0,6.283);cx.fill();
+  }
+  cx.globalAlpha=1;
+  requestAnimationFrame(loop);
+})();
+function openSheet(){document.getElementById('sheet').classList.add('on')}
+function closeSheet(){document.getElementById('sheet').classList.remove('on')}
+document.getElementById('rsvp').addEventListener('submit',()=>{
+  setTimeout(()=>{document.getElementById('formWrap').style.display='none';
+    document.getElementById('done').style.display='block';},600);
+});
+</script>
+</body>
+</html>

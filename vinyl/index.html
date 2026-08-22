@@ -24,7 +24,7 @@ body.playing .disc{animation-play-state:running}
 @keyframes spin{to{transform:rotate(360deg)}}
 .label{position:absolute;left:50%;top:50%;width:42%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;
   background:radial-gradient(circle at 42% 36%,#d8563c,#a33823 70%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;text-align:center}
-.label img{width:62%;filter:drop-shadow(0 1px 2px rgba(0,0,0,.5))}
+.label img{width:37%;filter:drop-shadow(0 1px 2px rgba(0,0,0,.5))}
 .label .s{font-size:7.5px;letter-spacing:.28em;text-indent:.28em;color:#f6ddc9}
 .hole{position:absolute;left:50%;top:50%;width:9px;height:9px;transform:translate(-50%,-50%);border-radius:50%;background:var(--bg)}
 .arm{position:absolute;right:-6%;top:-9%;width:34%;height:60%;pointer-events:none;transform-origin:82% 12%;transform:rotate(-24deg);transition:transform 1s cubic-bezier(.3,.9,.3,1)}
@@ -117,7 +117,7 @@ body.playing .sleeve{opacity:1;transform:none}
             <label><input type="radio" name="entry.1556673927" value="솔로입니다" required><span>솔로입니다</span></label>
             <label><input type="radio" name="entry.1556673927" value="솔로가 아닙니다"><span>솔로가 아닙니다</span></label>
           </div></div>
-        <div class="field"><label>럭키드로우 협찬 품목 <small style="letter-spacing:0;opacity:.6">(선택 · 1인당 최대 2개)</small></label>
+        <div class="field"><label>(희망 시) 럭키드로우 협찬 희망 품목 <small style="letter-spacing:0;opacity:.6">(1인당 최대 2개)</small></label>
           <input name="entry.558269791" placeholder="협찬하실 품목 (최대 2개)"></div>
         <div class="field"><label>대관 시간 확인 <small style="letter-spacing:0;opacity:.6">저녁 8시 ~ 밤 10시 30분 · 종료 시간 엄수</small></label>
           <div class="choice" style="grid-template-columns:1fr">

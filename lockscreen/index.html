@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>1%CLUB VIP DINNER — Invitation</title>
+<meta property="og:title" content="1%CLUB VIP DINNER">
+<meta property="og:description" content="밀어서 초대 확인. 2026. 8. 28 FRI 8PM–10:30PM">
+<meta name="theme-color" content="#0b0d14">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+:root{--acc:#8fb5ff;--bg:#0b0d14}
+body{background:var(--bg);color:#eef1fa;font-family:'Pretendard Variable',Pretendard,sans-serif;overflow-x:hidden;
+  background:radial-gradient(900px 640px at 50% -10%,#141a2c 0%,#0b0d14 62%)}
+.stage{min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:44px 20px}
+.phone{width:min(88vw,350px);border-radius:38px;border:1px solid #262c3e;padding:14px 12px 18px;
+  background:linear-gradient(170deg,#10131f,#0b0d14);box-shadow:0 30px 80px rgba(0,0,0,.7)}
+.notch{width:96px;height:22px;border-radius:999px;background:#05060a;margin:0 auto 18px}
+.clock{text-align:center;margin-bottom:4px;font-size:52px;font-weight:200;letter-spacing:.02em}
+.dateln{text-align:center;font-size:13px;color:#9aa5c4;margin-bottom:22px}
+.noti{margin:0 10px 10px;border-radius:18px;padding:14px 16px;background:rgba(255,255,255,.08);
+  backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.08);
+  opacity:0;transform:translateY(-10px);animation:drop .6s ease forwards}
+.noti:nth-of-type(4){animation-delay:.5s}
+.noti:nth-of-type(5){animation-delay:1s}
+@keyframes drop{to{opacity:1;transform:none}}
+.nh{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+.nh img{width:18px;height:18px;border-radius:5px;background:#000;padding:2.5px;object-fit:contain}
+.nh .app{font-size:11px;font-weight:600;letter-spacing:.06em;color:#c9d2ea}
+.nh .tm{margin-left:auto;font-size:10px;color:#77809c}
+.nt{font-size:13px;font-weight:600;margin-bottom:3px}
+.nb{font-size:12px;line-height:1.7;color:#c2cbe4;word-break:keep-all}
+.slidewrap{margin:24px 10px 4px}
+.slidetrack{position:relative;height:58px;border-radius:999px;background:rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.1);overflow:hidden;touch-action:none}
+.slidefill{position:absolute;inset:0;width:0;background:linear-gradient(90deg,rgba(143,181,255,.25),rgba(143,181,255,.08));pointer-events:none}
+.thumb{position:absolute;top:5px;left:5px;width:48px;height:48px;border-radius:50%;cursor:grab;
+  background:linear-gradient(140deg,#fff,#c9d6f5);display:flex;align-items:center;justify-content:center;
+  color:#1a2338;font-size:19px;box-shadow:0 4px 14px rgba(0,0,0,.4)}
+.slbl{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  font-size:13px;letter-spacing:.14em;color:#8d97b8;pointer-events:none;animation:shimmer 2.2s linear infinite}
+@keyframes shimmer{0%,100%{opacity:.55}50%{opacity:1}}
+/* unlocked overlay */
+.unlockview{position:fixed;inset:0;z-index:40;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:44px 24px;text-align:center;background:radial-gradient(800px 600px at 50% 0%,#182038 0%,#0b0d14 66%);
+  opacity:0;pointer-events:none;transition:opacity .7s ease}
+body.unlocked .unlockview{opacity:1;pointer-events:auto}
+.unlockview .logo{width:118px;margin-bottom:20px;filter:drop-shadow(0 1px 10px rgba(143,181,255,.4))}
+.unlockview .eyebrow{font-family:'Cormorant Garamond',serif;font-size:11px;letter-spacing:.5em;text-indent:.5em;color:var(--acc);margin-bottom:16px}
+.copy{font-size:13.5px;font-weight:300;line-height:2.1;color:#ccd5ec;word-break:keep-all}
+.detail{margin-top:22px;display:grid;gap:11px}
+.detail .k{font-size:9px;letter-spacing:.42em;color:#66719a;text-indent:.42em;margin-bottom:2px}
+.detail .v{font-family:'Cormorant Garamond','Pretendard Variable',serif;font-size:17px;color:#f2f5ff}
+.detail .v small{font-size:12px;color:#9ba7cd}
+.host{margin-top:20px;font-size:10.5px;letter-spacing:.18em;color:#8791b5}
+.rsvp-open{display:block;width:min(88vw,350px);margin:30px auto 0;padding:17px 0;border-radius:999px;border:none;cursor:pointer;
+  background:linear-gradient(135deg,#a9c4ff,#5b7fd6);color:#0a1226;font-family:inherit;font-weight:700;
+  font-size:14px;letter-spacing:.35em;text-indent:.35em;box-shadow:0 10px 34px rgba(143,181,255,.3)}
+.sheet{position:fixed;inset:0;background:rgba(4,5,10,.78);backdrop-filter:blur(8px);display:none;align-items:flex-end;justify-content:center;z-index:50}
+.sheet.on{display:flex}
+.panel{width:100%;max-width:480px;background:#10131f;border:1px solid rgba(143,181,255,.3);border-bottom:none;
+  border-radius:22px 22px 0 0;padding:30px 26px calc(30px + env(safe-area-inset-bottom));max-height:88svh;overflow-y:auto;animation:up .35s cubic-bezier(.2,.8,.2,1)}
+@keyframes up{from{transform:translateY(60px);opacity:0}to{transform:none;opacity:1}}
+.panel h2{font-family:'Cormorant Garamond',serif;font-size:14px;letter-spacing:.45em;text-indent:.45em;color:#d5e1ff;text-align:center;margin-bottom:6px}
+.panel .note{font-size:11.5px;color:#6f7998;text-align:center;margin-bottom:22px;line-height:1.8}
+.field{margin-bottom:16px}
+.field label{display:block;font-size:10.5px;letter-spacing:.22em;color:#93a0c4;margin-bottom:7px}
+.field input{width:100%;background:#181d2e;border:1px solid #2b3348;border-radius:10px;padding:13px 14px;color:#eef1fa;font-family:inherit;font-size:15px;outline:none}
+.field input:focus{border-color:var(--acc)}
+.choice{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.choice input{display:none}
+.choice span{display:block;text-align:center;padding:13px 6px;border:1px solid #2b3348;border-radius:10px;font-size:13px;color:#9aa5c8;cursor:pointer}
+.choice input:checked+span{border-color:var(--acc);color:#dbe6ff;background:rgba(143,181,255,.12)}
+.submit{width:100%;margin-top:8px;padding:16px 0;border-radius:12px;border:none;cursor:pointer;
+  background:linear-gradient(135deg,#a9c4ff,#5b7fd6);color:#0a1226;font-family:inherit;font-weight:700;font-size:14px;letter-spacing:.3em;text-indent:.3em}
+.close{display:block;margin:16px auto 0;background:none;border:none;color:#5d6683;font-size:11px;letter-spacing:.3em;cursor:pointer;font-family:inherit}
+.done{text-align:center;padding:34px 0 20px;display:none}
+.done .big{font-family:'Cormorant Garamond',serif;font-size:20px;letter-spacing:.3em;color:#d5e1ff;margin-bottom:14px}
+.done p{font-size:13px;color:#9aa5c8;line-height:2}
+.foot{text-align:center;font-size:10px;letter-spacing:.3em;color:#39405a;padding:24px 0 40px}
+</style>
+</head>
+<body>
+<div class="stage">
+  <div class="phone">
+    <div class="notch"></div>
+    <div class="clock">8:00</div>
+    <div class="dateln">8월 28일 금요일</div>
+    <div class="noti">
+      <div class="nh"><img src="../assets/logo-white.png" alt=""><span class="app">1%CLUB</span><span class="tm">지금</span></div>
+      <div class="nt">🎉 시크릿 디너 초대장이 도착했습니다</div>
+      <div class="nb">단 하루, 단 한 자리. 밀어서 자세히 보기</div>
+    </div>
+    <div class="noti">
+      <div class="nh"><img src="../assets/logo-white.png" alt=""><span class="app">1%CLUB</span><span class="tm">1분 전</span></div>
+      <div class="nb">📍 최선상회 · 서울 성동구 장터길 38-1</div>
+    </div>
+    <div class="noti">
+      <div class="nh"><img src="../assets/logo-white.png" alt=""><span class="app">1%CLUB</span><span class="tm">2분 전</span></div>
+      <div class="nb">🕗 저녁 8시 – 밤 10시 30분 (종료 시간 엄수)</div>
+    </div>
+    <div class="slidewrap">
+      <div class="slidetrack" id="track">
+        <div class="slidefill" id="fill"></div>
+        <div class="slbl" id="slbl">밀어서 초대 확인 →</div>
+        <div class="thumb" id="thumb">→</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="unlockview">
+  <img class="logo" src="../assets/logo-white.png" alt="1%CLUB">
+  <div class="eyebrow">UNLOCKED FOR YOU</div>
+  <p class="copy">잠금을 풀 수 있는 사람은 초대받은 사람뿐.<br>그날 저녁, 당신의 자리가 기다립니다.</p>
+  <div class="detail">
+    <div><div class="k">DATE</div><div class="v">2026. 8. 28 <small>FRI · 8:00 PM – 10:30 PM</small></div></div>
+    <div><div class="k">PLACE</div><div class="v">최선상회</div></div>
+    <div><div class="k">ADDRESS</div><div class="v"><small>서울 성동구 장터길 38-1</small></div></div>
+  </div>
+  <div class="host">host. 1%CLUB 김준형</div>
+  <button class="rsvp-open" onclick="openSheet()">R S V P</button>
+  <div class="foot">1%CLUB · PRIVATE DINNER SERIES</div>
+</div>
+
+<div class="sheet" id="sheet">
+  <div class="panel">
+    <div id="formWrap">
+      <h2>RSVP</h2>
+      <p class="note">좌석이 한정되어 있어 조기 마감될 수 있습니다.<br>아래 내용을 남겨주시면 확정 안내를 드립니다.</p>
+      <form id="rsvp" action="https://docs.google.com/forms/d/e/1FAIpQLSddsV6gYgW3Kfnzry5Cp3gtOZDgGaNMDZUKG9sHznGi60rTkg/formResponse" method="POST" target="gframe">
+        <div class="field"><label>이름</label>
+          <input name="entry.1633263028" required autocomplete="name" placeholder="이름을 입력해주세요"></div>
+        <div class="field"><label>성별</label>
+          <div class="choice">
+            <label><input type="radio" name="entry.1817100511" value="남" required><span>남</span></label>
+            <label><input type="radio" name="entry.1817100511" value="여"><span>여</span></label>
+          </div></div>
+        <div class="field"><label>MBTI</label>
+          <input name="entry.734525497" required placeholder="예: ENFP" maxlength="4" style="text-transform:uppercase"></div>
+        <div class="field"><label>연락처</label>
+          <input name="entry.826452057" required autocomplete="tel" inputmode="tel" placeholder="010-0000-0000"></div>
+        <div class="field"><label>솔로 여부</label>
+          <div class="choice">
+            <label><input type="radio" name="entry.1556673927" value="솔로입니다" required><span>솔로입니다</span></label>
+            <label><input type="radio" name="entry.1556673927" value="솔로가 아닙니다"><span>솔로가 아닙니다</span></label>
+          </div></div>
+        <div class="field"><label>(희망 시) 럭키드로우 협찬 희망 품목 <small style="letter-spacing:0;opacity:.6">(1인당 최대 2개)</small></label>
+          <input name="entry.558269791" placeholder="협찬하실 품목 (최대 2개)"></div>
+        <div class="field"><label>대관 시간 확인 <small style="letter-spacing:0;opacity:.6">저녁 8시 ~ 밤 10시 30분 · 종료 시간 엄수</small></label>
+          <div class="choice" style="grid-template-columns:1fr">
+            <label><input type="radio" name="entry.961666042" value="네, 확인했습니다" required><span>네, 확인했습니다</span></label>
+          </div></div>
+        <div class="field"><label>교통 안내 <small style="letter-spacing:0;opacity:.6">주차가 어려운 지역이에요 — 대중교통을 부탁드립니다</small></label>
+          <div class="choice" style="grid-template-columns:1fr">
+            <label><input type="radio" name="entry.97358986" value="네, 대중교통으로 방문하겠습니다" required><span>네, 대중교통으로 방문하겠습니다</span></label>
+          </div></div>
+        <input type="hidden" name="entry.974406819" value="LOCKSCREEN">
+        <button type="submit" class="submit">참석 회신 보내기</button></form>
+      <button class="close" onclick="closeSheet()">닫기</button>
+    </div>
+    <div class="done" id="done">
+      <div class="big">THANK YOU</div>
+      <p>회신이 전달되었습니다.<br>확정 안내를 곧 보내드리겠습니다.</p>
+      <button class="close" onclick="closeSheet()">닫기</button>
+    </div>
+  </div>
+</div>
+<iframe name="gframe" style="display:none"></iframe>
+
+<script>
+const track=document.getElementById('track'),thumb=document.getElementById('thumb'),
+      fill=document.getElementById('fill'),slbl=document.getElementById('slbl');
+let sx=null;
+thumb.addEventListener('pointerdown',e=>{sx=e.clientX;thumb.setPointerCapture(e.pointerId)});
+thumb.addEventListener('pointermove',e=>{
+  if(sx==null)return;
+  const max=track.clientWidth-58;
+  const x=Math.max(0,Math.min(max,e.clientX-sx));
+  thumb.style.left=(5+x)+'px';fill.style.width=(x+53)+'px';
+  slbl.style.opacity=Math.max(0,.9-x/max*1.4);
+  if(x>max*.92){sx=null;document.body.classList.add('unlocked');}
+});
+thumb.addEventListener('pointerup',()=>{
+  if(sx!=null&&!document.body.classList.contains('unlocked')){
+    thumb.style.left='5px';fill.style.width='0';slbl.style.opacity=.9;}
+  sx=null;
+});
+function openSheet(){document.getElementById('sheet').classList.add('on')}
+function closeSheet(){document.getElementById('sheet').classList.remove('on')}
+document.getElementById('rsvp').addEventListener('submit',()=>{
+  setTimeout(()=>{document.getElementById('formWrap').style.display='none';
+    document.getElementById('done').style.display='block';},600);
+});
+</script>
+</body>
+</html>

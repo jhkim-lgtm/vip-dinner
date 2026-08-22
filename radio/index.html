@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>1%CLUB VIP DINNER — Invitation</title>
+<meta property="og:title" content="1%CLUB VIP DINNER">
+<meta property="og:description" content="FM 88.28을 맞춰보세요. 2026. 8. 28 FRI 8PM–10:30PM">
+<meta name="theme-color" content="#141110">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+@font-face{font-family:'S-CoreDream';font-weight:300;src:url(https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff) format('woff')}
+@font-face{font-family:'S-CoreDream';font-weight:400;src:url(https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff) format('woff')}
+@font-face{font-family:'S-CoreDream';font-weight:500;src:url(https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-5Medium.woff) format('woff')}
+@font-face{font-family:'S-CoreDream';font-weight:600;src:url(https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff) format('woff')}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+:root{--amber:#e8b45c;--warm:#f4e0b6;--bg:#141110}
+body{background:var(--bg);color:#eee6d6;font-family:'S-CoreDream',sans-serif;overflow-x:hidden;
+  background:radial-gradient(900px 620px at 50% -8%,#211c18 0%,#141110 62%)}
+.stage{min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:48px 22px}
+.eyebrow{font-family:'Cormorant Garamond',serif;font-size:11px;letter-spacing:.5em;text-indent:.5em;color:#b3925c;margin-bottom:24px}
+.radio{width:min(90vw,370px);border-radius:20px;padding:24px 22px;border:1px solid #33291e;
+  background:linear-gradient(165deg,#1e1813,#151110);box-shadow:0 26px 70px rgba(0,0,0,.7)}
+.radio .logo{display:block;width:100px;margin:0 auto 16px;filter:drop-shadow(0 1px 6px rgba(232,180,92,.35))}
+.freqwin{position:relative;height:64px;border-radius:12px;background:#0d0a08;border:1px solid #2c2318;overflow:hidden;margin-bottom:6px}
+.scale{position:absolute;inset:0;display:flex;align-items:flex-end;padding-bottom:8px;
+  background:repeating-linear-gradient(90deg,rgba(232,180,92,.22) 0 1px,transparent 1px 10%)}
+.freq{position:absolute;left:0;right:0;top:8px;text-align:center;font-family:'IBM Plex Mono',monospace;
+  font-size:22px;color:var(--amber);text-shadow:0 0 12px rgba(232,180,92,.5)}
+.needle{position:absolute;top:0;bottom:0;width:2px;background:#e0503a;box-shadow:0 0 8px rgba(224,80,58,.7);left:20%}
+.band{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.26em;color:#6d5b40;text-align:center;margin-bottom:14px}
+.dialtrack{position:relative;height:46px;border-radius:999px;background:#0d0a08;border:1px solid #2c2318;touch-action:none;margin-bottom:6px}
+.knob{position:absolute;top:4px;width:38px;height:38px;border-radius:50%;left:calc(20% - 19px);
+  background:radial-gradient(circle at 38% 32%,#f0d9a8,#8d6f3a);box-shadow:0 4px 12px rgba(0,0,0,.6);cursor:grab}
+.dialhint{font-size:9.5px;letter-spacing:.24em;text-indent:.24em;color:#6d5b40;text-align:center}
+.static{margin-top:16px;height:64px;border-radius:12px;border:1px dashed #33291e;overflow:hidden;position:relative}
+.noise{position:absolute;inset:0;opacity:1;transition:opacity .5s;
+  background:repeating-radial-gradient(circle at 30% 40%,rgba(238,230,214,.12) 0 1px,transparent 1px 3px),
+             repeating-radial-gradient(circle at 70% 60%,rgba(238,230,214,.1) 0 1px,transparent 1px 2px);
+  animation:tvst .22s steps(2) infinite}
+@keyframes tvst{50%{transform:translate(2px,-2px)}}
+.onair{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;gap:10px;
+  font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.3em;color:var(--amber);opacity:0;transition:opacity .8s}
+.onair i{width:8px;height:8px;border-radius:50%;background:#e0503a;box-shadow:0 0 10px rgba(224,80,58,.8);animation:pulse 1.4s infinite}
+body.tuned .noise{opacity:.06;animation:none}
+body.tuned .onair{opacity:1}
+.hint{margin-top:24px;font-size:11px;letter-spacing:.32em;color:#6b5c45;text-transform:uppercase;animation:pulse 2.6s infinite}
+@keyframes pulse{0%,100%{opacity:.4}50%{opacity:1}}
+.broadcast{width:min(90vw,370px);margin-top:28px;text-align:center;opacity:0;transform:translateY(14px);
+  transition:opacity 1.2s ease .4s,transform 1.2s ease .4s}
+body.tuned .broadcast{opacity:1;transform:none}
+.copy{font-size:13px;font-weight:300;line-height:2.05;color:#dccfb4;word-break:keep-all}
+.detail{margin-top:18px;display:grid;gap:10px}
+.detail .k{font-size:8.5px;letter-spacing:.4em;color:#83704e;text-indent:.4em;margin-bottom:2px}
+.detail .v{font-family:'Cormorant Garamond','S-CoreDream',serif;font-size:16px;color:var(--warm)}
+.detail .v small{font-size:11.5px;color:#b09f7c}
+.host{margin-top:16px;font-size:10.5px;letter-spacing:.18em;color:#97835c}
+.rsvp-open{display:block;width:min(90vw,370px);margin:28px auto 0;padding:17px 0;border-radius:999px;border:none;cursor:pointer;
+  background:linear-gradient(135deg,#f0c478,#ac7f38);color:#171004;font-family:inherit;font-weight:500;
+  font-size:13.5px;letter-spacing:.35em;text-indent:.35em;box-shadow:0 10px 30px rgba(232,180,92,.25)}
+.sheet{position:fixed;inset:0;background:rgba(7,5,3,.76);backdrop-filter:blur(8px);display:none;align-items:flex-end;justify-content:center;z-index:50}
+.sheet.on{display:flex}
+.panel{width:100%;max-width:480px;background:#1a1510;border:1px solid rgba(232,180,92,.3);border-bottom:none;
+  border-radius:22px 22px 0 0;padding:30px 26px calc(30px + env(safe-area-inset-bottom));max-height:88svh;overflow-y:auto;animation:up .35s cubic-bezier(.2,.8,.2,1)}
+@keyframes up{from{transform:translateY(60px);opacity:0}to{transform:none;opacity:1}}
+.panel h2{font-family:'Cormorant Garamond',serif;font-size:14px;letter-spacing:.45em;text-indent:.45em;color:var(--warm);text-align:center;margin-bottom:6px}
+.panel .note{font-size:11.5px;color:#8a795a;text-align:center;margin-bottom:22px;line-height:1.8}
+.field{margin-bottom:16px}
+.field label{display:block;font-size:10.5px;letter-spacing:.2em;color:#a68d5f;margin-bottom:7px}
+.field input{width:100%;background:#241d15;border:1px solid #3b3122;border-radius:10px;padding:13px 14px;color:#f2ead8;font-family:inherit;font-size:15px;outline:none}
+.field input:focus{border-color:var(--amber)}
+.choice{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.choice input{display:none}
+.choice span{display:block;text-align:center;padding:13px 6px;border:1px solid #3b3122;border-radius:10px;font-size:13px;color:#b6a276;cursor:pointer}
+.choice input:checked+span{border-color:var(--amber);color:var(--warm);background:rgba(232,180,92,.1)}
+.submit{width:100%;margin-top:8px;padding:16px 0;border-radius:12px;border:none;cursor:pointer;
+  background:linear-gradient(135deg,#f0c478,#ac7f38);color:#171004;font-family:inherit;font-weight:500;font-size:13.5px;letter-spacing:.3em;text-indent:.3em}
+.close{display:block;margin:16px auto 0;background:none;border:none;color:#75633f;font-size:11px;letter-spacing:.3em;cursor:pointer;font-family:inherit}
+.done{text-align:center;padding:34px 0 20px;display:none}
+.done .big{font-family:'Cormorant Garamond',serif;font-size:20px;letter-spacing:.3em;color:var(--warm);margin-bottom:14px}
+.done p{font-size:13px;color:#b6a276;line-height:2}
+.foot{text-align:center;font-size:10px;letter-spacing:.3em;color:#453b28;padding-bottom:40px}
+</style>
+</head>
+<body>
+<div class="stage">
+  <div class="eyebrow">MIDNIGHT FREQUENCY</div>
+  <div class="radio">
+    <img class="logo" src="../assets/logo-white.png" alt="1%CLUB">
+    <div class="freqwin">
+      <div class="scale"></div>
+      <div class="freq" id="freq">87.50<span style="font-size:12px"> MHz</span></div>
+      <div class="needle" id="needle"></div>
+    </div>
+    <div class="band">FM 87.5 — 89.0 · FIND 88.28</div>
+    <div class="dialtrack" id="track"><div class="knob" id="knob"></div></div>
+    <div class="dialhint">다이얼을 좌우로 돌려 주파수를 맞추세요</div>
+    <div class="static">
+      <div class="noise"></div>
+      <div class="onair"><i></i>ON AIR — 1%CLUB DINNER RADIO</div>
+    </div>
+  </div>
+  <div class="hint" id="hint">TUNE TO 88.28</div>
+  <div class="broadcast">
+    <p class="copy">「…들리시나요. 8월 28일 저녁 8시,<br>좋은 음식과 좋은 사람들의 방송이 시작됩니다.」</p>
+    <div class="detail">
+      <div><div class="k">DATE</div><div class="v">2026. 8. 28 <small>FRI · 8:00 PM – 10:30 PM</small></div></div>
+      <div><div class="k">PLACE</div><div class="v">최선상회 <small>서울 성동구 장터길 38-1</small></div></div>
+    </div>
+    <div class="host">host. 1%CLUB 김준형</div>
+  </div>
+  <button class="rsvp-open" onclick="openSheet()">R S V P</button>
+</div>
+
+<div class="sheet" id="sheet">
+  <div class="panel">
+    <div id="formWrap">
+      <h2>RSVP</h2>
+      <p class="note">좌석이 한정되어 있어 조기 마감될 수 있습니다.<br>아래 내용을 남겨주시면 확정 안내를 드립니다.</p>
+      <form id="rsvp" action="https://docs.google.com/forms/d/e/1FAIpQLSddsV6gYgW3Kfnzry5Cp3gtOZDgGaNMDZUKG9sHznGi60rTkg/formResponse" method="POST" target="gframe">
+        <div class="field"><label>이름</label>
+          <input name="entry.1633263028" required autocomplete="name" placeholder="이름을 입력해주세요"></div>
+        <div class="field"><label>성별</label>
+          <div class="choice">
+            <label><input type="radio" name="entry.1817100511" value="남" required><span>남</span></label>
+            <label><input type="radio" name="entry.1817100511" value="여"><span>여</span></label>
+          </div></div>
+        <div class="field"><label>MBTI</label>
+          <input name="entry.734525497" required placeholder="예: ENFP" maxlength="4" style="text-transform:uppercase"></div>
+        <div class="field"><label>연락처</label>
+          <input name="entry.826452057" required autocomplete="tel" inputmode="tel" placeholder="010-0000-0000"></div>
+        <div class="field"><label>솔로 여부</label>
+          <div class="choice">
+            <label><input type="radio" name="entry.1556673927" value="솔로입니다" required><span>솔로입니다</span></label>
+            <label><input type="radio" name="entry.1556673927" value="솔로가 아닙니다"><span>솔로가 아닙니다</span></label>
+          </div></div>
+        <div class="field"><label>(희망 시) 럭키드로우 협찬 희망 품목 <small style="letter-spacing:0;opacity:.6">(1인당 최대 2개)</small></label>
+          <input name="entry.558269791" placeholder="협찬하실 품목 (최대 2개)"></div>
+        <div class="field"><label>대관 시간 확인 <small style="letter-spacing:0;opacity:.6">저녁 8시 ~ 밤 10시 30분 · 종료 시간 엄수</small></label>
+          <div class="choice" style="grid-template-columns:1fr">
+            <label><input type="radio" name="entry.961666042" value="네, 확인했습니다" required><span>네, 확인했습니다</span></label>
+          </div></div>
+        <div class="field"><label>교통 안내 <small style="letter-spacing:0;opacity:.6">주차가 어려운 지역이에요 — 대중교통을 부탁드립니다</small></label>
+          <div class="choice" style="grid-template-columns:1fr">
+            <label><input type="radio" name="entry.97358986" value="네, 대중교통으로 방문하겠습니다" required><span>네, 대중교통으로 방문하겠습니다</span></label>
+          </div></div>
+        <input type="hidden" name="entry.974406819" value="RADIO">
+        <button type="submit" class="submit">참석 회신 보내기</button></form>
+      <button class="close" onclick="closeSheet()">닫기</button>
+    </div>
+    <div class="done" id="done">
+      <div class="big">SIGNAL SENT</div>
+      <p>회신이 전달되었습니다.<br>확정 안내를 곧 보내드리겠습니다.</p>
+      <button class="close" onclick="closeSheet()">닫기</button>
+    </div>
+  </div>
+</div>
+<iframe name="gframe" style="display:none"></iframe>
+<div class="foot">1%CLUB · PRIVATE DINNER SERIES</div>
+
+<script>
+const track=document.getElementById('track'),knob=document.getElementById('knob'),
+      freqEl=document.getElementById('freq'),needle=document.getElementById('needle');
+const FMIN=87.5,FMAX=89.0,TARGET=88.28;
+let p=0,drag=false;
+function setP(np){
+  p=Math.max(0,Math.min(1,np));
+  const f=FMIN+(FMAX-FMIN)*p;
+  knob.style.left=`calc(${p*100}% - ${p*38}px + ${(1-p)*0}px)`;
+  knob.style.left=`calc(${(p*100).toFixed(2)}% - ${(p*38).toFixed(0)}px)`;
+  needle.style.left=(p*100)+'%';
+  freqEl.innerHTML=f.toFixed(2)+'<span style="font-size:12px"> MHz</span>';
+  const tuned=Math.abs(f-TARGET)<.06;
+  document.body.classList.toggle('tuned',tuned);
+  if(tuned)document.getElementById('hint').style.opacity=.15;
+}
+setP(0);
+track.addEventListener('pointerdown',e=>{drag=true;track.setPointerCapture(e.pointerId);move(e)});
+track.addEventListener('pointermove',move);
+track.addEventListener('pointerup',()=>drag=false);
+function move(e){
+  if(!drag)return;
+  const r=track.getBoundingClientRect();
+  setP((e.clientX-r.left-19)/(r.width-38));
+}
+function openSheet(){document.getElementById('sheet').classList.add('on')}
+function closeSheet(){document.getElementById('sheet').classList.remove('on')}
+document.getElementById('rsvp').addEventListener('submit',()=>{
+  setTimeout(()=>{document.getElementById('formWrap').style.display='none';
+    document.getElementById('done').style.display='block';},600);
+});
+</script>
+</body>
+</html>
