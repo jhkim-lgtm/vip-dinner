@@ -80,6 +80,10 @@ body.tuned .broadcast{opacity:1;transform:none}
 .done .big{font-family:'Cormorant Garamond',serif;font-size:20px;letter-spacing:.3em;color:var(--warm);margin-bottom:14px}
 .done p{font-size:13px;color:#b6a276;line-height:2}
 .foot{text-align:center;font-size:10px;letter-spacing:.3em;color:#453b28;padding-bottom:40px}
+
+.rsvp-open{display:none}
+body.rsvp-ready .rsvp-open{display:block;animation:rsvpin .9s ease}
+@keyframes rsvpin{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
 </style>
 </head>
 <body>
@@ -172,7 +176,7 @@ function setP(np){
   freqEl.innerHTML=f.toFixed(2)+'<span style="font-size:12px"> MHz</span>';
   const tuned=Math.abs(f-TARGET)<.06;
   document.body.classList.toggle('tuned',tuned);
-  if(tuned)document.getElementById('hint').style.opacity=.15;
+  if(tuned){document.getElementById('hint').style.opacity=.15;document.body.classList.add('rsvp-ready');}
 }
 setP(0);
 track.addEventListener('pointerdown',e=>{drag=true;track.setPointerCapture(e.pointerId);move(e)});

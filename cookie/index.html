@@ -70,6 +70,10 @@ body.crack .invite{opacity:1;transform:none}
 .done .big{font-family:'Cormorant Garamond',serif;font-size:20px;letter-spacing:.3em;color:#f4e6c4;margin-bottom:14px}
 .done p{font-size:13px;color:#b7a377;line-height:2}
 .foot{text-align:center;font-size:10px;letter-spacing:.3em;color:#473d2b;padding-bottom:40px}
+
+.rsvp-open{display:none}
+body.rsvp-ready .rsvp-open{display:block;animation:rsvpin .9s ease}
+@keyframes rsvpin{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
 </style>
 </head>
 <body>
@@ -148,7 +152,7 @@ body.crack .invite{opacity:1;transform:none}
 
 <script>
 document.getElementById('cookie').addEventListener('click',()=>{
-  document.body.classList.add('crack');
+  document.body.classList.add('crack');document.body.classList.add('rsvp-ready');
   document.getElementById('hint').style.opacity=.15;
 });
 function openSheet(){document.getElementById('sheet').classList.add('on')}

@@ -81,6 +81,10 @@ body.caught .prizeview{opacity:1;transform:none}
 .done .big{font-family:'Cormorant Garamond',serif;font-size:20px;letter-spacing:.3em;color:#f6e6b4;margin-bottom:14px}
 .done p{font-size:13px;color:#b3a6ce;line-height:2}
 .foot{text-align:center;font-size:10px;letter-spacing:.3em;color:#453e58;padding-bottom:40px}
+
+.rsvp-open{display:none}
+body.rsvp-ready .rsvp-open{display:block;animation:rsvpin .9s ease}
+@keyframes rsvpin{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
 </style>
 </head>
 <body>
@@ -181,7 +185,7 @@ go.addEventListener('click',()=>{
   // 3) reveal
   setTimeout(()=>{
     target.style.transform='translateY(-176px) scale(1.35)';
-    document.body.classList.add('caught');
+    document.body.classList.add('caught');document.body.classList.add('rsvp-ready');
   },2600);
 });
 function openSheet(){document.getElementById('sheet').classList.add('on')}

@@ -75,6 +75,10 @@ body.lit .rsvp-open{display:block}
 .done .big{font-family:'Cormorant Garamond',serif;font-size:20px;letter-spacing:.3em;color:var(--amber-hi);margin-bottom:14px}
 .done p{font-size:13px;color:#b89c74;line-height:2}
 .foot{text-align:center;font-size:10px;letter-spacing:.3em;color:#463726;padding-bottom:40px}
+
+.rsvp-open{display:none}
+body.rsvp-ready .rsvp-open{display:block;animation:rsvpin .9s ease}
+@keyframes rsvpin{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
 </style>
 </head>
 <body>
@@ -158,7 +162,7 @@ strip.addEventListener('pointermove',e=>{
   if(progress>.92)light();
 });
 strip.addEventListener('pointerup',()=>{if(progress<.92){sx=null;progress=0;tip.style.left='12px';spark.style.width='0'}});
-function light(){if(document.body.classList.contains('lit'))return;document.body.classList.add('lit');sx=null;}
+function light(){if(document.body.classList.contains('lit'))return;document.body.classList.add('lit');document.body.classList.add('rsvp-ready');sx=null;}
 function openSheet(){document.getElementById('sheet').classList.add('on')}
 function closeSheet(){document.getElementById('sheet').classList.remove('on')}
 document.getElementById('rsvp').addEventListener('submit',()=>{

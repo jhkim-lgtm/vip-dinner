@@ -71,6 +71,10 @@ body.unlocked .doorlock{border-color:rgba(74,216,200,.55);box-shadow:0 26px 70px
 .done .big{font-family:'IBM Plex Mono',monospace;font-size:16px;letter-spacing:.3em;color:var(--teal);margin-bottom:14px}
 .done p{font-size:13px;color:#93aab0;line-height:2}
 .foot{text-align:center;font-size:10px;letter-spacing:.3em;color:#333d42;padding-bottom:40px}
+
+.rsvp-open{display:none}
+body.rsvp-ready .rsvp-open{display:block;animation:rsvpin .9s ease}
+@keyframes rsvpin{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
 </style>
 </head>
 <body>
@@ -160,7 +164,7 @@ document.getElementById('keys').addEventListener('click',e=>{
   else if(buf.length<4)buf+=b.textContent;
   render();
   if(buf.length===4){
-    if(buf===CODE){document.body.classList.add('unlocked');
+    if(buf===CODE){document.body.classList.add('unlocked');document.body.classList.add('rsvp-ready');
       document.getElementById('hint').style.opacity=.15;}
     else{disp.classList.add('err');lock.classList.add('deny');
       setTimeout(()=>{buf="";render();disp.classList.remove('err');lock.classList.remove('deny')},600);}

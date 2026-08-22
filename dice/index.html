@@ -72,6 +72,10 @@ body.rolled .invite{opacity:1;transform:none}
 .done .big{font-family:'Cormorant Garamond',serif;font-size:20px;letter-spacing:.3em;color:#f2e2ae;margin-bottom:14px}
 .done p{font-size:13px;color:#a9b98a;line-height:2}
 .foot{text-align:center;font-size:10px;letter-spacing:.3em;color:#3b4634;padding-bottom:40px}
+
+.rsvp-open{display:none}
+body.rsvp-ready .rsvp-open{display:block;animation:rsvpin .9s ease}
+@keyframes rsvpin{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
 </style>
 </head>
 <body>
@@ -173,7 +177,7 @@ function roll(){
   document.getElementById('sum').innerHTML='&nbsp;';
   setTimeout(()=>{
     document.getElementById('sum').innerHTML=`${a} + ${b} = <b>8</b> — 8 O'CLOCK, IT'S FATE`;
-    document.body.classList.add('rolled');
+    document.body.classList.add('rolled');document.body.classList.add('rsvp-ready');
     document.getElementById('hint').style.opacity=.15;
     rolling=false;
   },1650);

@@ -74,6 +74,10 @@ body{background:var(--bg);color:#e9e2f2;font-family:'Pretendard Variable',Preten
 .done .big{font-family:'Cormorant Garamond',serif;font-size:20px;letter-spacing:.3em;color:var(--gold-hi);margin-bottom:14px}
 .done p{font-size:13px;color:#a99dcb;line-height:2}
 .foot{text-align:center;font-size:10px;letter-spacing:.3em;color:#453c5e;padding-bottom:40px}
+
+.rsvp-open{display:none}
+body.rsvp-ready .rsvp-open{display:block;animation:rsvpin .9s ease}
+@keyframes rsvpin{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
 </style>
 </head>
 <body>
@@ -170,7 +174,7 @@ const fan=document.getElementById('fan');
 fan.querySelectorAll('.tcard').forEach(c=>{
   c.addEventListener('click',()=>{
     if(fan.classList.contains('picked'))return;
-    fan.classList.add('picked');
+    fan.classList.add('picked');document.body.classList.add('rsvp-ready');
     fan.querySelectorAll('.tcard').forEach(o=>o.classList.add(o===c?'chosen':'away'));
     document.getElementById('hint').style.opacity=.2;
   });

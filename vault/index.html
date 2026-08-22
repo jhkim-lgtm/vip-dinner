@@ -81,6 +81,10 @@ body{background:#101216;color:var(--txt);font-family:'Pretendard Variable',Prete
 .done .big{font-family:'Space Grotesk',sans-serif;font-size:17px;letter-spacing:.34em;color:var(--glow);margin-bottom:12px}
 .done p{font-size:13px;color:#9aa1af;line-height:2}
 .foot{text-align:center;font-family:'Space Grotesk',sans-serif;font-size:9px;letter-spacing:.34em;color:#3b414d;padding:44px 0 10px}
+
+.rsvp-open{display:none}
+body.rsvp-ready .rsvp-open{display:block;animation:rsvpin .9s ease}
+@keyframes rsvpin{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
 </style>
 </head>
 <body>
@@ -197,7 +201,7 @@ function move(e){
 function end(){last=null;dial.style.cursor='grab';}
 dial.addEventListener('pointerdown',start);window.addEventListener('pointermove',move);window.addEventListener('pointerup',end);
 function unlock(){
-  unlocked=true;
+  unlocked=true;document.body.classList.add('rsvp-ready');
   if(navigator.vibrate)navigator.vibrate([30,60,30]);
   document.getElementById('gate').classList.add('hidden');
   document.body.classList.add('revealed');

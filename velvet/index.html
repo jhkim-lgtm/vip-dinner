@@ -96,6 +96,10 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.35;
 .done .big{font-family:'Playfair Display',serif;font-size:19px;letter-spacing:.3em;color:var(--brass-hi);margin-bottom:12px}
 .done p{font-size:13px;color:#a8977a;line-height:2}
 .foot{text-align:center;font-size:9.5px;letter-spacing:.32em;color:#57422c;padding:44px 0 10px}
+
+.rsvp-open{display:none}
+body.rsvp-ready .rsvp-open{display:block;animation:rsvpin .9s ease}
+@keyframes rsvpin{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
 </style>
 </head>
 <body>
@@ -213,7 +217,7 @@ function up(){if(unlocked)return;holdStart=null;cancelAnimationFrame(raf);ring.s
 medal.addEventListener('pointerdown',down);
 medal.addEventListener('pointerup',up);medal.addEventListener('pointerleave',up);medal.addEventListener('pointercancel',up);
 function unlock(){
-  unlocked=true;
+  unlocked=true;document.body.classList.add('rsvp-ready');
   const doors=document.getElementById('doors');
   doors.style.display='flex';
   document.getElementById('gate').classList.add('hidden');

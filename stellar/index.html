@@ -91,6 +91,10 @@ body{background:var(--bg);color:#e6e9f4;font-family:'Pretendard Variable',Preten
 .done .big{font-family:'Cormorant Garamond',serif;font-size:21px;letter-spacing:.3em;color:var(--gold);margin-bottom:14px}
 .done p{font-size:13px;color:#a7b0ca;line-height:2}
 .foot{text-align:center;font-size:9.5px;letter-spacing:.34em;color:#333d5c;padding-bottom:40px;position:relative;z-index:2}
+
+.rsvp-open{display:none}
+body.rsvp-ready .rsvp-open{display:block;animation:rsvpin .9s ease}
+@keyframes rsvpin{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
 </style>
 </head>
 <body>
@@ -191,6 +195,7 @@ window.addEventListener('deviceorientation',e=>{
   st2.style.transform=`translate(${cry*-3.2}px,${crx*2.8}px)`;
   requestAnimationFrame(loop);
 })(t0);
+setTimeout(()=>document.body.classList.add('rsvp-ready'),3500);
 function openSheet(){document.getElementById('sheet').classList.add('on')}
 function closeSheet(){document.getElementById('sheet').classList.remove('on')}
 document.getElementById('rsvp').addEventListener('submit',()=>{

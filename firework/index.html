@@ -56,6 +56,10 @@ body.lit3 .hint{opacity:0}
 .done .big{font-family:'Cormorant Garamond',serif;font-size:20px;letter-spacing:.3em;color:#f7ecca;margin-bottom:14px}
 .done p{font-size:13px;color:#aba283;line-height:2}
 .foot{position:relative;z-index:2;text-align:center;font-size:10px;letter-spacing:.3em;color:#3d3a2e;padding-bottom:40px;pointer-events:none}
+
+.rsvp-open{display:none}
+body.rsvp-ready .rsvp-open{display:block;animation:rsvpin .9s ease}
+@keyframes rsvpin{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
 </style>
 </head>
 <body>
@@ -143,7 +147,7 @@ document.body.addEventListener('pointerdown',e=>{
   shots++;
   const c=document.getElementById('counter');
   c.textContent=`FIRE 3 SHOTS · ${Math.min(shots,3)} / 3`;
-  if(shots>=3)setTimeout(()=>document.body.classList.add('lit3'),650);
+  if(shots>=3)setTimeout(()=>{document.body.classList.add('lit3');document.body.classList.add('rsvp-ready');},650);
 });
 (function loop(){
   cx.fillStyle='rgba(7,7,13,.22)';cx.fillRect(0,0,W,H);

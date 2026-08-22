@@ -80,6 +80,10 @@ body.unlocked .unlockview{opacity:1;pointer-events:auto}
 .done .big{font-family:'Cormorant Garamond',serif;font-size:20px;letter-spacing:.3em;color:#d5e1ff;margin-bottom:14px}
 .done p{font-size:13px;color:#9aa5c8;line-height:2}
 .foot{text-align:center;font-size:10px;letter-spacing:.3em;color:#39405a;padding:24px 0 40px}
+
+.rsvp-open{display:none}
+body.rsvp-ready .rsvp-open{display:block;animation:rsvpin .9s ease}
+@keyframes rsvpin{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
 </style>
 </head>
 <body>
@@ -181,7 +185,7 @@ thumb.addEventListener('pointermove',e=>{
   const x=Math.max(0,Math.min(max,e.clientX-sx));
   thumb.style.left=(5+x)+'px';fill.style.width=(x+53)+'px';
   slbl.style.opacity=Math.max(0,.9-x/max*1.4);
-  if(x>max*.92){sx=null;document.body.classList.add('unlocked');}
+  if(x>max*.92){sx=null;document.body.classList.add('unlocked');document.body.classList.add('rsvp-ready');}
 });
 thumb.addEventListener('pointerup',()=>{
   if(sx!=null&&!document.body.classList.contains('unlocked')){

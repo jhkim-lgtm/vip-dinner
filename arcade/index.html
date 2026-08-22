@@ -70,6 +70,10 @@ body.won .invite{opacity:1;transform:none}
 .done .big{font-family:'Press Start 2P',monospace;font-size:14px;color:var(--yl);margin-bottom:16px;text-shadow:0 0 12px rgba(255,225,77,.7)}
 .done p{font-size:13px;color:#b3a8dd;line-height:2}
 .foot{text-align:center;font-size:10px;letter-spacing:.3em;color:#453d68;padding-bottom:40px}
+
+.rsvp-open{display:none}
+body.rsvp-ready .rsvp-open{display:block;animation:rsvpin .9s ease}
+@keyframes rsvpin{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
 </style>
 </head>
 <body>
@@ -169,7 +173,7 @@ function spin(){
       el.style.transition=`transform ${1.6+i*.45}s cubic-bezier(.15,.9,.25,1)`;
       el.style.transform=`translateY(-${(lens[i]-1)*H}px)`;
     });
-    setTimeout(()=>{document.body.classList.add('won');spinning=false;},1.6*1000+2*450+300);
+    setTimeout(()=>{document.body.classList.add('won');document.body.classList.add('rsvp-ready');spinning=false;},1.6*1000+2*450+300);
   }));
 }
 document.getElementById('spin').addEventListener('click',spin);
