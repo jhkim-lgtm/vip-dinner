@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>1%CLUB VIP DINNER — Invitation</title>
+<meta property="og:title" content="​">
+<meta property="og:image" content="https://jhkim-lgtm.github.io/vip-dinner/assets/og-dinner.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="theme-color" content="#0a0714">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+:root{--pk:#ff4d9d;--cy:#38e8ff;--yl:#ffe14d;--bg:#0a0714}
+body{background:var(--bg);color:#efe9ff;font-family:'Pretendard Variable',Pretendard,sans-serif;overflow-x:hidden;
+  background:radial-gradient(800px 560px at 50% -6%,#171034 0%,#0a0714 60%)}
+.stage{min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:48px 20px}
+.marq{font-family:'Press Start 2P',monospace;font-size:11px;color:var(--yl);text-shadow:0 0 12px rgba(255,225,77,.7);margin-bottom:8px}
+.marq2{font-size:10.5px;letter-spacing:.32em;text-indent:.32em;color:#8d82c0;margin-bottom:30px}
+.cab{width:min(92vw,370px);border-radius:20px;padding:24px 20px 22px;position:relative;
+  background:linear-gradient(165deg,#1c1440,#120c28 70%);border:2px solid #38254f;
+  box-shadow:0 26px 70px rgba(0,0,0,.7),0 0 44px rgba(255,77,157,.14),inset 0 0 24px rgba(56,232,255,.05)}
+.cab .logo{display:block;width:90px;margin:0 auto 18px;filter:drop-shadow(0 0 10px rgba(56,232,255,.5))}
+.slots{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:16px}
+.reel{height:86px;border-radius:12px;background:#08051a;border:1px solid #3a2a60;overflow:hidden;position:relative}
+.reel .strip{position:absolute;left:0;right:0;top:0;display:grid;gap:0;transition:transform 2.4s cubic-bezier(.15,.9,.25,1)}
+.reel .cell{height:86px;display:flex;align-items:center;justify-content:center;font-family:'Press Start 2P',monospace;font-size:26px}
+.reel .cell.c1{color:var(--pk);text-shadow:0 0 14px rgba(255,77,157,.8)}
+.reel .cell.c2{color:var(--cy);text-shadow:0 0 14px rgba(56,232,255,.8)}
+.reel .cell.c3{color:var(--yl);text-shadow:0 0 14px rgba(255,225,77,.8)}
+.payline{position:absolute;left:6%;right:6%;top:50%;border-top:1px dashed rgba(255,255,255,.22);pointer-events:none}
+.btn-spin{display:block;width:100%;padding:15px 0;border-radius:12px;border:none;cursor:pointer;
+  font-family:'Press Start 2P',monospace;font-size:12px;color:#14051d;background:linear-gradient(135deg,#ff77b5,#ff2e8a);
+  box-shadow:0 8px 24px rgba(255,77,157,.4)}
+.jack{margin-top:16px;text-align:center;font-family:'Press Start 2P',monospace;font-size:10px;line-height:2;color:var(--yl);
+  opacity:0;transition:opacity .6s;text-shadow:0 0 12px rgba(255,225,77,.7)}
+body.won .jack{opacity:1;animation:blinkj .8s steps(1) 4}
+@keyframes blinkj{50%{opacity:.25}}
+.invite{width:min(92vw,370px);margin-top:26px;text-align:center;opacity:0;transform:translateY(12px);transition:opacity 1s ease .5s,transform 1s ease .5s}
+body.won .invite{opacity:1;transform:none}
+.copy{font-size:13px;line-height:2.05;color:#cfc6ec;word-break:keep-all}
+.detail{margin-top:18px;display:grid;grid-template-columns:1fr 1fr;gap:12px;text-align:left}
+.pill{border:1px solid #3a2a60;border-radius:12px;padding:12px 14px;background:rgba(20,12,44,.6)}
+.pill .k{font-size:8.5px;letter-spacing:.3em;color:#7c6fb0;margin-bottom:4px}
+.pill .v{font-size:13px;font-weight:700;color:#f2edff}
+.pill.wide{grid-column:1/-1}
+.host{margin-top:14px;font-size:10.5px;letter-spacing:.18em;color:#9188bd}
+.rsvp-open{display:block;width:min(92vw,370px);margin:28px auto 0;padding:17px 0;border-radius:999px;border:none;cursor:pointer;
+  background:linear-gradient(135deg,#54ecff,#1fa4c8);color:#04212b;font-family:inherit;font-weight:800;
+  font-size:13.5px;letter-spacing:.35em;text-indent:.35em;box-shadow:0 10px 30px rgba(56,232,255,.3)}
+.sheet{position:fixed;inset:0;background:rgba(4,2,10,.8);backdrop-filter:blur(8px);display:none;align-items:flex-end;justify-content:center;z-index:50}
+.sheet.on{display:flex}
+.panel{width:100%;max-width:480px;background:#130d2a;border:1px solid #3a2a60;border-bottom:none;
+  border-radius:22px 22px 0 0;padding:30px 26px calc(30px + env(safe-area-inset-bottom));max-height:88svh;overflow-y:auto;animation:up .35s cubic-bezier(.2,.8,.2,1)}
+@keyframes up{from{transform:translateY(60px);opacity:0}to{transform:none;opacity:1}}
+.panel h2{font-family:'Press Start 2P',monospace;font-size:12px;color:var(--cy);text-align:center;margin-bottom:8px;text-shadow:0 0 10px rgba(56,232,255,.6)}
+.panel .note{font-size:11.5px;color:#8d82c0;text-align:center;margin-bottom:22px;line-height:1.8}
+.field{margin-bottom:16px}
+.field label{display:block;font-size:10.5px;letter-spacing:.2em;color:#a99ed6;margin-bottom:7px}
+.field input{width:100%;background:#1c1440;border:1px solid #3f2e6b;border-radius:10px;padding:13px 14px;color:#f4efff;font-family:inherit;font-size:15px;outline:none}
+.field input:focus{border-color:var(--pk)}
+.choice{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.choice input{display:none}
+.choice span{display:block;text-align:center;padding:13px 6px;border:1px solid #3f2e6b;border-radius:10px;font-size:13px;color:#b3a8dd;cursor:pointer}
+.choice input:checked+span{border-color:var(--pk);color:#ffd7ea;background:rgba(255,77,157,.14)}
+.submit{width:100%;margin-top:8px;padding:16px 0;border-radius:12px;border:none;cursor:pointer;
+  background:linear-gradient(135deg,#ff77b5,#ff2e8a);color:#1d0512;font-family:inherit;font-weight:800;font-size:14px;letter-spacing:.3em;text-indent:.3em}
+.close{display:block;margin:16px auto 0;background:none;border:none;color:#6f65a0;font-size:11px;letter-spacing:.3em;cursor:pointer;font-family:inherit}
+.done{text-align:center;padding:34px 0 20px;display:none}
+.done .big{font-family:'Press Start 2P',monospace;font-size:14px;color:var(--yl);margin-bottom:16px;text-shadow:0 0 12px rgba(255,225,77,.7)}
+.done p{font-size:13px;color:#b3a8dd;line-height:2}
+.foot{text-align:center;font-size:10px;letter-spacing:.3em;color:#453d68;padding-bottom:40px}
+
+.rsvp-open{display:none}
+body.rsvp-ready .rsvp-open{display:block;animation:rsvpin .9s ease}
+@keyframes rsvpin{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="stage">
+  <div class="marq">★ CHEF'S TABLE NIGHT ★</div>
+  <div class="marq2">INSERT YOURSELF TO PLAY</div>
+  <div class="cab">
+    <img class="logo" src="../assets/logo-white.png" alt="1%CLUB">
+    <div class="slots">
+      <div class="reel"><div class="strip" id="r0"></div><div class="payline"></div></div>
+      <div class="reel"><div class="strip" id="r1"></div><div class="payline"></div></div>
+      <div class="reel"><div class="strip" id="r2"></div><div class="payline"></div></div>
+    </div>
+    <button class="btn-spin" id="spin">SPIN!</button>
+    <div class="jack">JACKPOT!<br>YOU ARE INVITED</div>
+  </div>
+  <div class="invite">
+    <p class="copy">당첨을 축하합니다 — 오늘의 상품은 <b>당신의 자리</b>입니다.<br>이북식 다이닝 코스와 잔술 페어링이 있는 저녁,<br>9월 18일 금요일 저녁을 비워두세요.</p>
+    <div class="detail">
+      <div class="pill"><div class="k">DATE</div><div class="v">2026. 9. 18 (금)</div></div>
+      <div class="pill"><div class="k">TIME</div><div class="v">18:45 – 21:20</div></div>
+      <div class="pill wide"><div class="k">PLACE</div><div class="v">리북방 · 서울 마포구 마포대로1길 16, 2층</div></div>
+    </div>
+    <div class="host">host. 1%CLUB 김준형</div>
+    <div style="margin-top:10px;font-size:10px;color:#7c6fb0;letter-spacing:.06em">주차는 매장 근처 마포유수지 공영 주차장을 이용해 주세요.<br>18:45 시작 · 21:20 종료</div>
+  </div>
+  <button class="rsvp-open" onclick="openSheet()">R S V P</button>
+</div>
+
+<div class="sheet" id="sheet">
+  <div class="panel">
+    <div id="formWrap">
+      <h2>PLAYER ENTRY</h2>
+      <p class="note">좌석이 한정되어 있어 조기 마감될 수 있습니다.<br>아래 내용을 남겨주시면 확정 안내를 드립니다.</p>
+      <form id="rsvp" action="https://docs.google.com/forms/d/e/1FAIpQLSeY7gLbx8g9hvF2tpLUgzYzQycH07JrzVWeVtvLMz-DjNcX8w/formResponse" method="POST" target="gframe">
+        <div class="field"><label>이름</label>
+          <input name="entry.1853362081" required autocomplete="name" placeholder="이름을 입력해주세요"></div>
+        <div class="field"><label>연락처</label>
+          <input name="entry.194720296" required autocomplete="tel" inputmode="tel" placeholder="010-0000-0000"></div>
+        <div class="field"><label>알레르기 · 못 드시는 음식 · 논알콜 <small style="letter-spacing:0;opacity:.6">(선택)</small></label>
+          <input name="entry.539405936" placeholder="예: 갑각류 알레르기, 오이, 논알콜 희망"></div>
+        <div class="field"><label>대관 시간 확인 <small style="letter-spacing:0;opacity:.6">18:45 ~ 21:20 · 종료 시간 엄수</small></label>
+          <div class="choice" style="grid-template-columns:1fr">
+            <label><input type="radio" name="entry.1777337467" value="네, 확인했습니다" required><span>네, 확인했습니다</span></label>
+          </div></div>
+        <div class="field"><label>교통 안내 <small style="letter-spacing:0;opacity:.6">매장 근처 마포유수지 공영 주차장 이용</small></label>
+          <div class="choice" style="grid-template-columns:1fr">
+            <label><input type="radio" name="entry.1363629480" value="네, 주차 안내를 확인했습니다" required><span>네, 주차 안내를 확인했습니다</span></label>
+          </div></div>
+        <input type="hidden" name="entry.1395077817" value="ARCADE-0918-V2">
+        <button type="submit" class="submit">참석 회신 보내기</button></form>
+      <button class="close" onclick="closeSheet()">닫기</button>
+    </div>
+    <div class="done" id="done">
+      <div class="big">ENTRY OK!</div>
+      <p>회신이 전달되었습니다.<br>확정 안내를 곧 보내드리겠습니다.</p>
+      <button class="close" onclick="closeSheet()">닫기</button>
+    </div>
+  </div>
+</div>
+<iframe name="gframe" style="display:none"></iframe>
+<div class="foot">1%CLUB · PRIVATE DINNER SERIES</div>
+
+<script>
+const SYM=[["7","♦","%","★","1"],["♦","1","★","7","%"],["%","★","7","1","♣"]];
+const FINAL=["1","%","♣"];const CLS=["c1","c2","c3"];
+const H=86;
+function buildReel(id,syms,fin){
+  const el=document.getElementById(id);el.innerHTML="";
+  const seq=[];
+  for(let r=0;r<5;r++)seq.push(...syms);
+  seq.push(fin);
+  seq.forEach((s,i)=>{const d=document.createElement('div');
+    d.className='cell '+CLS[i%3];d.textContent=s;el.appendChild(d)});
+  el.style.transition='none';el.style.transform='translateY(0)';
+  return seq.length;
+}
+let spinning=false;
+function spin(){
+  if(spinning)return;spinning=true;
+  document.body.classList.remove('won');
+  const lens=[0,1,2].map(i=>buildReel('r'+i,SYM[i],FINAL[i]));
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{
+    [0,1,2].forEach(i=>{
+      const el=document.getElementById('r'+i);
+      el.style.transition=`transform ${1.6+i*.45}s cubic-bezier(.15,.9,.25,1)`;
+      el.style.transform=`translateY(-${(lens[i]-1)*H}px)`;
+    });
+    setTimeout(()=>{document.body.classList.add('won');document.body.classList.add('rsvp-ready');spinning=false;},1.6*1000+2*450+300);
+  }));
+}
+document.getElementById('spin').addEventListener('click',spin);
+[0,1,2].forEach(i=>buildReel('r'+i,SYM[i],FINAL[i]));
+function openSheet(){document.getElementById('sheet').classList.add('on')}
+function closeSheet(){document.getElementById('sheet').classList.remove('on')}
+document.getElementById('rsvp').addEventListener('submit',()=>{
+  setTimeout(()=>{document.getElementById('formWrap').style.display='none';
+    document.getElementById('done').style.display='block';},600);
+});
+
+new MutationObserver(()=>{
+  if(document.body.classList.contains('rsvp-ready')&&!window.__rsvpScrolled){
+    window.__rsvpScrolled=true;
+    setTimeout(()=>{const b=document.querySelector('.rsvp-open');
+      if(b)b.scrollIntoView({behavior:'smooth',block:'center'});},1000);
+  }
+}).observe(document.body,{attributes:true,attributeFilter:['class']});
+</script>
+</body>
+</html>
