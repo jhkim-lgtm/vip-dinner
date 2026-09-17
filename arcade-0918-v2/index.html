@@ -60,8 +60,8 @@ body.won .invite{opacity:1;transform:none}
 .panel .note{font-size:11.5px;color:#8d82c0;text-align:center;margin-bottom:22px;line-height:1.8}
 .field{margin-bottom:16px}
 .field label{display:block;font-size:10.5px;letter-spacing:.2em;color:#a99ed6;margin-bottom:7px}
-.field input,.field select{width:100%;background:#1c1440;border:1px solid #3f2e6b;border-radius:10px;padding:13px 14px;color:#f4efff;font-family:inherit;font-size:15px;outline:none}
-.field input:focus,.field select:focus{border-color:var(--pk)}
+.field input{width:100%;background:#1c1440;border:1px solid #3f2e6b;border-radius:10px;padding:13px 14px;color:#f4efff;font-family:inherit;font-size:15px;outline:none}
+.field input:focus{border-color:var(--pk)}
 .choice{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .choice input{display:none}
 .choice span{display:block;text-align:center;padding:13px 6px;border:1px solid #3f2e6b;border-radius:10px;font-size:13px;color:#b3a8dd;cursor:pointer}
@@ -117,18 +117,7 @@ body.rsvp-ready .rsvp-open{display:block;animation:rsvpin .9s ease}
         <div class="field"><label>연락처</label>
           <input name="entry.194720296" required autocomplete="tel" inputmode="tel" placeholder="010-0000-0000"></div>
         <div class="field"><label for="mbti">MBTI <small style="letter-spacing:0;opacity:.6">(선택)</small></label>
-          <select id="mbti" name="entry.2035788126">
-            <option value="">MBTI를 선택해주세요</option>
-            <option value="INTJ">INTJ</option><option value="INTP">INTP</option>
-            <option value="ENTJ">ENTJ</option><option value="ENTP">ENTP</option>
-            <option value="INFJ">INFJ</option><option value="INFP">INFP</option>
-            <option value="ENFJ">ENFJ</option><option value="ENFP">ENFP</option>
-            <option value="ISTJ">ISTJ</option><option value="ISFJ">ISFJ</option>
-            <option value="ESTJ">ESTJ</option><option value="ESFJ">ESFJ</option>
-            <option value="ISTP">ISTP</option><option value="ISFP">ISFP</option>
-            <option value="ESTP">ESTP</option><option value="ESFP">ESFP</option>
-            <option value="모름">모름</option>
-          </select></div>
+          <input type="text" id="mbti" name="entry.2035788126" placeholder="예: ENFP" autocapitalize="characters" spellcheck="false"></div>
         <div class="field"><label>알레르기 · 못 드시는 음식 · 논알콜 <small style="letter-spacing:0;opacity:.6">(선택)</small></label>
           <input name="entry.539405936" placeholder="예: 갑각류 알레르기, 오이, 논알콜 희망"></div>
         <div class="field"><label>운영 시간 확인 <small style="letter-spacing:0;opacity:.6">18:45 ~ 21:20 · 종료 시간 엄수</small></label>
@@ -138,11 +127,6 @@ body.rsvp-ready .rsvp-open{display:block;animation:rsvpin .9s ease}
         <div class="field"><label>교통 안내 <small style="letter-spacing:0;opacity:.6">매장 근처 마포유수지 공영 주차장 이용</small></label>
           <div class="choice" style="grid-template-columns:1fr">
             <label><input type="radio" name="entry.1363629480" value="네, 주차 안내를 확인했습니다" required><span>네, 주차 안내를 확인했습니다</span></label>
-          </div></div>
-        <div class="field"><label>2차 참가 희망 여부 <small style="letter-spacing:0;opacity:.6">(여의도 칠링)</small></label>
-          <div class="choice">
-            <label><input type="radio" name="entry.172205041" value="참가 희망" required><span>참가 희망</span></label>
-            <label><input type="radio" name="entry.172205041" value="참가하지 않음"><span>참가하지 않음</span></label>
           </div></div>
         <input type="hidden" name="entry.1395077817" value="ARCADE-0918-V2">
         <button type="submit" class="submit">참석 회신 보내기</button></form>
