@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>1%CLUB VIP — Great Wines World Seoul 2026</title>
+<meta property="og:title" content="​">
+<meta property="og:image" content="https://jhkim-lgtm.github.io/vip-dinner/assets/og-dinner.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="theme-color" content="#160d12">
+<link rel="icon" type="image/svg+xml" href="./favicon.svg?v=20260916">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+:root{--pk:#ff4d9d;--cy:#38e8ff;--yl:#ffe14d;--bg:#160d12}
+body{background:var(--bg);color:#efe9ff;font-family:'Pretendard Variable',Pretendard,sans-serif;overflow-x:hidden;
+  background:radial-gradient(800px 560px at 50% -6%,#171034 0%,#160d12 60%)}
+.stage{min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:48px 20px}
+.marq{font-family:'Press Start 2P',monospace;font-size:11px;color:var(--yl);text-shadow:0 0 12px rgba(255,225,77,.7);margin-bottom:8px}
+.marq2{font-size:10.5px;letter-spacing:.32em;text-indent:.32em;color:#8d82c0;margin-bottom:30px}
+.cab{width:min(92vw,370px);border-radius:20px;padding:24px 20px 22px;position:relative;
+  background:linear-gradient(165deg,#1c1440,#120c28 70%);border:2px solid #38254f;
+  box-shadow:0 26px 70px rgba(0,0,0,.7),0 0 44px rgba(255,77,157,.14),inset 0 0 24px rgba(56,232,255,.05)}
+.cab .logo{display:block;width:90px;margin:0 auto 18px;filter:drop-shadow(0 0 10px rgba(56,232,255,.5))}
+.slots{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:16px}
+.reel{height:86px;border-radius:12px;background:#08051a;border:1px solid #3a2a60;overflow:hidden;position:relative}
+.reel .strip{position:absolute;left:0;right:0;top:0;display:grid;gap:0;transition:transform 2.4s cubic-bezier(.15,.9,.25,1)}
+.reel .cell{height:86px;display:flex;align-items:center;justify-content:center;font-family:'Press Start 2P',monospace;font-size:26px}
+.reel .cell.c1{color:var(--pk);text-shadow:0 0 14px rgba(255,77,157,.8)}
+.reel .cell.c2{color:var(--cy);text-shadow:0 0 14px rgba(56,232,255,.8)}
+.reel .cell.c3{color:var(--yl);text-shadow:0 0 14px rgba(255,225,77,.8)}
+.payline{position:absolute;left:6%;right:6%;top:50%;border-top:1px dashed rgba(255,255,255,.22);pointer-events:none}
+.btn-spin{display:block;width:100%;padding:15px 0;border-radius:12px;border:none;cursor:pointer;
+  font-family:'Press Start 2P',monospace;font-size:12px;color:#14051d;background:linear-gradient(135deg,#ff77b5,#ff2e8a);
+  box-shadow:0 8px 24px rgba(255,77,157,.4)}
+.jack{margin-top:16px;text-align:center;font-family:'Press Start 2P',monospace;font-size:10px;line-height:2;color:var(--yl);
+  opacity:0;transition:opacity .6s;text-shadow:0 0 12px rgba(255,225,77,.7)}
+body.won .jack{opacity:1;animation:blinkj .8s steps(1) 4}
+@keyframes blinkj{50%{opacity:.25}}
+.invite{width:min(92vw,370px);margin-top:26px;text-align:center;opacity:0;transform:translateY(12px);transition:opacity 1s ease .5s,transform 1s ease .5s}
+body.won .invite{opacity:1;transform:none}
+.copy{font-size:13px;line-height:2.05;color:#cfc6ec;word-break:keep-all}
+.detail{margin-top:18px;display:grid;grid-template-columns:1fr 1fr;gap:12px;text-align:left}
+.pill{border:1px solid #3a2a60;border-radius:12px;padding:12px 14px;background:rgba(20,12,44,.6)}
+.pill .k{font-size:8.5px;letter-spacing:.3em;color:#7c6fb0;margin-bottom:4px}
+.pill .v{font-size:13px;font-weight:700;color:#f2edff}
+.pill.wide{grid-column:1/-1}
+.host{margin-top:14px;font-size:10.5px;letter-spacing:.18em;color:#9188bd}
+.rsvp-open{display:block;width:min(92vw,370px);margin:28px auto 0;padding:17px 0;border-radius:999px;border:none;cursor:pointer;
+  background:linear-gradient(135deg,#54ecff,#1fa4c8);color:#04212b;font-family:inherit;font-weight:800;
+  font-size:13.5px;letter-spacing:.35em;text-indent:.35em;box-shadow:0 10px 30px rgba(56,232,255,.3)}
+.sheet{position:fixed;inset:0;background:rgba(4,2,10,.8);backdrop-filter:blur(8px);display:none;align-items:flex-end;justify-content:center;z-index:50}
+.sheet.on{display:flex}
+.panel{width:100%;max-width:480px;background:#130d2a;border:1px solid #3a2a60;border-bottom:none;
+  border-radius:22px 22px 0 0;padding:30px 26px calc(30px + env(safe-area-inset-bottom));max-height:88svh;overflow-y:auto;animation:up .35s cubic-bezier(.2,.8,.2,1)}
+@keyframes up{from{transform:translateY(60px);opacity:0}to{transform:none;opacity:1}}
+.panel h2{font-family:'Press Start 2P',monospace;font-size:12px;color:var(--cy);text-align:center;margin-bottom:8px;text-shadow:0 0 10px rgba(56,232,255,.6)}
+.panel .note{font-size:11.5px;color:#8d82c0;text-align:center;margin-bottom:22px;line-height:1.8}
+.field{margin-bottom:16px}
+.field label{display:block;font-size:10.5px;letter-spacing:.2em;color:#a99ed6;margin-bottom:7px}
+.field input{width:100%;background:#1c1440;border:1px solid #3f2e6b;border-radius:10px;padding:13px 14px;color:#f4efff;font-family:inherit;font-size:15px;outline:none}
+.field input:focus{border-color:var(--pk)}
+.choice{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.choice input{display:none}
+.choice span{display:block;text-align:center;padding:13px 6px;border:1px solid #3f2e6b;border-radius:10px;font-size:13px;color:#b3a8dd;cursor:pointer}
+.choice input:checked+span{border-color:var(--pk);color:#ffd7ea;background:rgba(255,77,157,.14)}
+.submit{width:100%;margin-top:8px;padding:16px 0;border-radius:12px;border:none;cursor:pointer;
+  background:linear-gradient(135deg,#ff77b5,#ff2e8a);color:#1d0512;font-family:inherit;font-weight:800;font-size:14px;letter-spacing:.3em;text-indent:.3em}
+.close{display:block;margin:16px auto 0;background:none;border:none;color:#6f65a0;font-size:11px;letter-spacing:.3em;cursor:pointer;font-family:inherit}
+.done{text-align:center;padding:34px 0 20px;display:none}
+.done .big{font-family:'Press Start 2P',monospace;font-size:14px;color:var(--yl);margin-bottom:16px;text-shadow:0 0 12px rgba(255,225,77,.7)}
+.done p{font-size:13px;color:#b3a8dd;line-height:2}
+.foot{text-align:center;font-size:10px;letter-spacing:.3em;color:#453d68;padding-bottom:40px}
+
+.rsvp-open{display:none}
+body.rsvp-ready .rsvp-open{display:block;animation:rsvpin .9s ease}
+@keyframes rsvpin{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+
+/* Wine theme: edit these tokens to change the palette. */
+:root{--wine-bg:#160d12;--wine-panel:#26161e;--wine-accent:#a74d65;--wine-gold:#dfc28b;--wine-text:#f5ede6;--wine-muted:#c6adb6;--wine-line:#63404c;--pk:var(--wine-accent);--cy:var(--wine-gold);--yl:var(--wine-gold)}
+body{color:var(--wine-text);background:radial-gradient(ellipse at 50% 0%,#482132 0%,var(--wine-bg) 70%)}
+.marq,.jack,.panel h2{font-family:'Cormorant Garamond',Georgia,serif;text-shadow:none}
+.marq{font-size:28px;letter-spacing:.035em;text-align:center}.marq2{color:var(--wine-muted);font-size:9px;letter-spacing:.23em}
+.cab{background:linear-gradient(150deg,#3a202a,var(--wine-panel));border:1px solid var(--wine-line);box-shadow:0 28px 80px #09030788,inset 0 1px #dfc28b33;border-radius:22px}
+.cab .logo{filter:none}.reel{background:#170d12;border-color:var(--wine-line)}.reel .cell{font-family:inherit;font-size:35px;text-shadow:none!important}
+.btn-spin,.submit,.rsvp-open{background:linear-gradient(120deg,#ecd5a8,var(--wine-gold));color:#321c22;box-shadow:0 8px 24px #09030744;font-family:inherit;letter-spacing:.06em;font-weight:700;text-indent:0}
+.btn-spin{font-size:11px}.jack{font-size:18px;letter-spacing:.14em}.copy{color:var(--wine-text);font-size:14px}.copy b{font-family:inherit;font-size:21px;font-weight:600}.eyebrow{font-size:11px;letter-spacing:.22em;color:var(--wine-gold)}
+.pill{background:#281720aa;border-color:var(--wine-line)}.pill .k{color:var(--wine-gold)}.pill .v{color:var(--wine-text)}.pill small{font-weight:400;line-height:2}.host{color:var(--wine-muted)}.invite>div[style]{color:var(--wine-muted)!important;line-height:1.9;font-size:11px!important}
+.panel{background:var(--wine-panel);border-color:var(--wine-line)}.panel h2{font-size:26px;letter-spacing:.08em}.panel .note,.field label,.privacy{color:var(--wine-muted)}.field label{font-size:12px;letter-spacing:.03em}
+.field input{background:#190e14;border-color:var(--wine-line);color:var(--wine-text);font-size:16px}.field input::placeholder{color:#aa8e98}.choice span{border-color:var(--wine-line);color:var(--wine-text);line-height:1.6;padding:12px}.choice input:checked+span{background:#74334755;border-color:var(--wine-gold);color:var(--wine-text)}
+.choice input{display:block;position:absolute;opacity:0;width:1px;height:1px}.choice label{position:relative}.choice input:focus-visible+span{outline:2px solid var(--wine-gold);outline-offset:3px}.close{color:var(--wine-muted);padding:8px;font-size:12px}.privacy{font-size:11px;line-height:1.7;margin:18px 0}.foot{color:var(--wine-muted);font-size:9px}
+button:focus-visible{outline:2px solid var(--wine-gold);outline-offset:4px}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+</style>
+</head>
+<body>
+<div class="stage">
+  <div class="marq">GREAT WINES WORLD</div>
+  <div class="marq2">SEOUL 2026 · VIP INVITATION</div>
+  <div class="cab">
+    <img class="logo" src="../assets/logo-white.png" alt="1%CLUB">
+    <div class="slots">
+      <div class="reel"><div class="strip" id="r0"></div><div class="payline"></div></div>
+      <div class="reel"><div class="strip" id="r1"></div><div class="payline"></div></div>
+      <div class="reel"><div class="strip" id="r2"></div><div class="payline"></div></div>
+    </div>
+    <button class="btn-spin" id="spin">UNCORK YOUR INVITATION</button>
+    <div class="jack">CHEERS!<br>YOU ARE INVITED</div>
+  </div>
+  <div class="invite">
+    <p class="copy"><span class="eyebrow">JAMES SUCKLING</span><br><b>세계의 와인을 만나는 저녁.</b><br>제임스 서클링이 선보이는 와인 테이스팅에<br>1%CLUB의 소중한 게스트를 초대합니다.</p>
+    <div class="detail">
+      <div class="pill"><div class="k">DATE</div><div class="v">2026. 11. 2 (월)</div></div>
+      <div class="pill"><div class="k">TIME</div><div class="v">17:00 – 20:00</div></div>
+      <div class="pill wide"><div class="k">PLACE</div><div class="v">그랜드 하얏트 서울<br><small>서울 용산구 소월로 322</small></div></div>
+    </div>
+    <div class="host">invited by 1%CLUB 김준형</div>
+    <div style="margin-top:10px;font-size:10px;color:#7c6fb0;letter-spacing:.06em">와인 시음 행사이므로 대중교통을 이용해 주세요.<br>17:00 시작 · 20:00 종료<br>입장 티켓과 등록 절차는 RSVP 접수 후 별도 안내드립니다.</div>
+  </div>
+  <button class="rsvp-open" onclick="openSheet()">R S V P</button>
+</div>
+
+<div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-label="VIP RSVP">
+  <div class="panel">
+    <div id="formWrap">
+      <h2>VIP RSVP</h2>
+      <p class="note">참석하실 분의 정보를 남겨주세요.<br>입장 티켓과 등록 절차는 별도 안내드립니다.</p>
+      <form id="rsvp" action="https://docs.google.com/forms/d/e/1FAIpQLSehUaqGqNWYzJSzulhDe1_-NlBv1XQN6bYlb53DgO7oXXcj9A/formResponse" method="POST"><div class="field"><label for="q1950512113">이름</label><input id="q1950512113" type="text" name="entry.1950512113" required placeholder="이름을 입력해주세요"></div><div class="field"><label for="q1258107612">연락처</label><input id="q1258107612" type="tel" name="entry.1258107612" required placeholder="010-0000-0000"></div><div class="field"><label for="q1395405053">이메일</label><input id="q1395405053" type="email" name="entry.1395405053" required placeholder="티켓을 안내받을 이메일"></div><div class="field"><label for="q253488581">소속 / 회사명</label><input id="q253488581" type="text" name="entry.253488581" required placeholder="소속이 없으면 개인으로 입력"></div><div class="field"><label for="q1459472733">직책</label><input id="q1459472733" type="text" name="entry.1459472733" required placeholder="직책이 없으면 해당 없음"></div><div class="field"><label for="q286607010">와인업계 종사 여부</label><div class="choice" style="grid-template-columns:1fr"><label><input type="radio" name="entry.286607010" value="예" required><span>예</span></label><label><input type="radio" name="entry.286607010" value="아니요" required><span>아니요</span></label></div></div><div class="field"><label for="q666498757">MBTI (선택)</label><input id="q666498757" type="text" name="entry.666498757"  placeholder="예: ENFP"></div><div class="field"><label for="q543374519">행사 및 교통 안내 확인</label><div class="choice" style="grid-template-columns:1fr"><label><input type="radio" name="entry.543374519" value="2026년 11월 2일 17:00–20:00 및 대중교통 이용 안내를 확인했습니다" required><span>2026년 11월 2일 17:00–20:00 및 대중교통 이용 안내를 확인했습니다</span></label></div></div><div class="field"><label for="q2078008267">성인 확인</label><div class="choice" style="grid-template-columns:1fr"><label><input type="radio" name="entry.2078008267" value="성인이며 주류 시음 행사임을 확인했습니다" required><span>성인이며 주류 시음 행사임을 확인했습니다</span></label></div></div><p class="privacy">입력하신 정보는 1%CLUB의 초대 확인 및 티켓 등록 안내에 사용됩니다.</p><button type="submit" class="submit">참석 회신 보내기</button></form>
+      <button class="close" onclick="closeSheet()">닫기</button>
+    </div>
+    </div></div>
+<div class="foot">1%CLUB · PRIVATE INVITATION</div>
+
+<script>
+const SYM=[["🍇","🍷","🥂","🍾","🍷"],["🥂","🍇","🍷","🍾","🍷"],["🍾","🥂","🍇","🍷","🍷"]];
+const FINAL=["🍷","🍷","🍷"];const CLS=["c1","c2","c3"];
+const H=86;
+function buildReel(id,syms,fin){
+  const el=document.getElementById(id);el.innerHTML="";
+  const seq=[];
+  for(let r=0;r<5;r++)seq.push(...syms);
+  seq.push(fin);
+  seq.forEach((s,i)=>{const d=document.createElement('div');
+    d.className='cell '+CLS[i%3];d.textContent=s;el.appendChild(d)});
+  el.style.transition='none';el.style.transform='translateY(0)';
+  return seq.length;
+}
+let spinning=false;
+function spin(){
+  if(spinning)return;spinning=true;
+  document.body.classList.remove('won');
+  const lens=[0,1,2].map(i=>buildReel('r'+i,SYM[i],FINAL[i]));
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{
+    [0,1,2].forEach(i=>{
+      const el=document.getElementById('r'+i);
+      el.style.transition=`transform ${1.6+i*.45}s cubic-bezier(.15,.9,.25,1)`;
+      el.style.transform=`translateY(-${(lens[i]-1)*H}px)`;
+    });
+    setTimeout(()=>{document.body.classList.add('won');document.body.classList.add('rsvp-ready');spinning=false;},1.6*1000+2*450+300);
+  }));
+}
+document.getElementById('spin').addEventListener('click',spin);
+[0,1,2].forEach(i=>buildReel('r'+i,SYM[i],FINAL[i]));
+function openSheet(){document.getElementById('sheet').classList.add('on');document.body.style.overflow='hidden';document.querySelector('#rsvp input').focus()}
+function closeSheet(){document.getElementById('sheet').classList.remove('on');document.body.style.overflow='';document.querySelector('.rsvp-open').focus()}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeSheet()});
+
+
+new MutationObserver(()=>{
+  if(document.body.classList.contains('rsvp-ready')&&!window.__rsvpScrolled){
+    window.__rsvpScrolled=true;
+    setTimeout(()=>{const b=document.querySelector('.rsvp-open');
+      if(b)b.scrollIntoView({behavior:'smooth',block:'center'});},1000);
+  }
+}).observe(document.body,{attributes:true,attributeFilter:['class']});
+</script>
+</body>
+</html>
