@@ -96,6 +96,10 @@ button:focus-visible{outline:2px solid var(--wine-gold);outline-offset:4px}
 .companion-notice strong{display:block;margin-bottom:7px;color:var(--wine-gold);font-size:16px;font-weight:800}
 .companion-notice b{color:#fff;font-weight:800;text-decoration:underline;text-underline-offset:3px}
 .panel .companion-notice{margin:0 0 22px}
+.registration-warning{margin-top:14px;padding-top:14px;border-top:1px solid #dfc28b55;color:#ffced0;font-size:14px;line-height:1.8;font-weight:700}
+.companion-fields{min-width:0;margin:24px 0;padding:18px 16px 2px;border:1px solid var(--wine-gold);border-radius:14px}
+.companion-fields legend{padding:0 8px;color:var(--wine-gold);font-size:16px;font-weight:800}
+.field-note{margin:0 0 18px;color:var(--wine-muted);font-size:13px;line-height:1.8;word-break:keep-all}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 
 </style>
@@ -126,6 +130,7 @@ button:focus-visible{outline:2px solid var(--wine-gold);outline-offset:4px}
     <aside class="companion-notice" aria-label="RSVP 입력 전 준비 안내">
       <strong>동반인 정보도 미리 준비해 주세요</strong>
       <p>동반인 등록에도 <b>성함과 이메일</b>이 필요합니다.<br>RSVP 입력 전 미리 준비해 주세요.</p>
+      <p class="registration-warning">본인과 동반인의 성함 또는 이메일이 정확하지 않으면 티켓 등록·확인이 어려워 입장이 어려울 수 있습니다. 제출 전 다시 확인해 주세요.</p>
     </aside>
   </div>
   <button class="rsvp-open" onclick="openSheet()">R S V P</button>
@@ -139,8 +144,16 @@ button:focus-visible{outline:2px solid var(--wine-gold);outline-offset:4px}
       <aside class="companion-notice" aria-label="RSVP 입력 전 준비 안내">
         <strong>동반인 정보도 미리 준비해 주세요</strong>
         <p>동반인 등록에도 <b>성함과 이메일</b>이 필요합니다.<br>RSVP 입력 전 미리 준비해 주세요.</p>
+        <p class="registration-warning">본인과 동반인의 성함 또는 이메일이 정확하지 않으면 티켓 등록·확인이 어려워 입장이 어려울 수 있습니다. 제출 전 다시 확인해 주세요.</p>
       </aside>
-      <form id="rsvp" action="https://docs.google.com/forms/d/e/1FAIpQLSehUaqGqNWYzJSzulhDe1_-NlBv1XQN6bYlb53DgO7oXXcj9A/formResponse" method="POST"><div class="event-reminder" style="border:1px solid var(--wine-line);border-radius:12px;padding:14px;margin:0 0 22px;color:var(--wine-text);font-size:13px;line-height:1.8"><strong>행사 시간 · 장소</strong><br>2026년 11월 2일(월) 17:00–20:00<br>그랜드 하얏트 서울<br><small>서울 용산구 소월로 322</small></div><div class="field"><label for="q1950512113">이름</label><input id="q1950512113" type="text" name="entry.1950512113" required placeholder="이름을 입력해주세요"></div><div class="field"><label for="q1258107612">연락처</label><input id="q1258107612" type="tel" name="entry.1258107612" required placeholder="010-0000-0000"></div><div class="field"><label for="q1395405053">이메일</label><input id="q1395405053" type="email" name="entry.1395405053" required placeholder="티켓을 안내받을 이메일"></div><div class="field"><label for="q253488581">소속 / 회사명</label><input id="q253488581" type="text" name="entry.253488581" required placeholder="소속이 없으면 개인으로 입력"></div><div class="field"><label for="q1459472733">직책</label><input id="q1459472733" type="text" name="entry.1459472733" required placeholder="직책이 없으면 해당 없음"></div><div class="field"><label for="q2078008267">성인 확인</label><div class="choice" style="grid-template-columns:1fr"><label><input type="radio" name="entry.2078008267" value="성인이며 주류 시음 행사임을 확인했습니다" required><span>성인이며 주류 시음 행사임을 확인했습니다</span></label></div></div><p class="privacy">입력하신 정보는 1%CLUB의 초대 확인 및 티켓 등록 안내에 사용됩니다.</p><button type="submit" class="submit">참석 회신 보내기</button></form>
+      <form id="rsvp" action="https://docs.google.com/forms/d/e/1FAIpQLSehUaqGqNWYzJSzulhDe1_-NlBv1XQN6bYlb53DgO7oXXcj9A/formResponse" method="POST"><div class="event-reminder" style="border:1px solid var(--wine-line);border-radius:12px;padding:14px;margin:0 0 22px;color:var(--wine-text);font-size:13px;line-height:1.8"><strong>행사 시간 · 장소</strong><br>2026년 11월 2일(월) 17:00–20:00<br>그랜드 하얏트 서울<br><small>서울 용산구 소월로 322</small></div><div class="field"><label for="q1950512113">이름</label><input id="q1950512113" type="text" name="entry.1950512113" required placeholder="이름을 입력해주세요"></div><div class="field"><label for="q1258107612">연락처</label><input id="q1258107612" type="tel" name="entry.1258107612" required placeholder="010-0000-0000"></div><div class="field"><label for="q1395405053">이메일</label><input id="q1395405053" type="email" name="entry.1395405053" required placeholder="티켓을 안내받을 이메일"></div><div class="field"><label for="q253488581">소속 / 회사명</label><input id="q253488581" type="text" name="entry.253488581" required placeholder="소속이 없으면 개인으로 입력"></div><div class="field"><label for="q1459472733">직책</label><input id="q1459472733" type="text" name="entry.1459472733" required placeholder="직책이 없으면 해당 없음"></div>
+<fieldset class="companion-fields" aria-describedby="companion-help">
+  <legend>동반인 정보</legend>
+  <p class="field-note" id="companion-help">동반인이 있는 경우 성함과 이메일을 모두 정확히 입력해 주세요. 동반인이 없으면 비워 두세요.</p>
+  <div class="field"><label for="companion-name">동반인 성함</label><input id="companion-name" type="text" name="entry.1739720287" autocomplete="section-companion name" placeholder="동반인의 성함을 입력해 주세요" aria-describedby="companion-help"></div>
+  <div class="field"><label for="companion-email">동반인 이메일</label><input id="companion-email" type="email" name="entry.1196049616" autocomplete="section-companion email" autocapitalize="none" spellcheck="false" placeholder="동반인의 이메일을 입력해 주세요" aria-describedby="companion-help"></div>
+</fieldset>
+<div class="field"><label for="q2078008267">성인 확인</label><div class="choice" style="grid-template-columns:1fr"><label><input type="radio" name="entry.2078008267" value="성인이며 주류 시음 행사임을 확인했습니다" required><span>성인이며 주류 시음 행사임을 확인했습니다</span></label></div></div><p class="privacy">입력하신 정보는 1%CLUB의 초대 확인 및 티켓 등록 안내에 사용됩니다.</p><button type="submit" class="submit">참석 회신 보내기</button></form>
       <button class="close" onclick="closeSheet()">닫기</button>
     </div>
     </div></div>
@@ -180,6 +193,20 @@ function openSheet(){document.getElementById('sheet').classList.add('on');docume
 function closeSheet(){document.getElementById('sheet').classList.remove('on');document.body.style.overflow='';document.querySelector('.rsvp-open').focus()}
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeSheet()});
 
+const companionInputs=[...document.querySelectorAll('.companion-fields input')];
+function validateCompanion(){
+  const hasCompanion=companionInputs.some(input=>input.value.trim());
+  companionInputs.forEach(input=>{
+    input.required=hasCompanion;
+    input.setCustomValidity(hasCompanion&&!input.value.trim()?'동반인의 성함과 이메일을 모두 입력해 주세요.':'');
+  });
+}
+companionInputs.forEach(input=>input.addEventListener('input',validateCompanion));
+document.getElementById('rsvp').addEventListener('submit',event=>{
+  companionInputs.forEach(input=>{input.value=input.value.trim()});
+  validateCompanion();
+  if(!event.currentTarget.reportValidity())event.preventDefault();
+});
 
 new MutationObserver(()=>{
   if(document.body.classList.contains('rsvp-ready')&&!window.__rsvpScrolled){
