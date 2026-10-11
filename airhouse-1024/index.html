@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>10/24 에어하우스 VIP 초대</title>
+<meta property="og:title" content="10/24 에어하우스 VIP 초대">
+<meta name="twitter:title" content="10/24 에어하우스 VIP 초대">
+<meta property="og:image" content="https://jhkim-lgtm.github.io/vip-dinner/assets/og-dinner.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="자연 속, 음악과 함께하는 24시간. 10월 24~25일 남양주 더 드림핑에서 열리는 에어하우스 페스티벌에 초대합니다.">
+<meta property="og:description" content="10월 24~25일 · 남양주 더 드림핑 · 1%CLUB 초대">
+<meta property="og:url" content="https://jhkim-lgtm.github.io/vip-dinner/airhouse-1024/">
+<meta name="theme-color" content="#0e1713">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+:root{--pk:#ff4d9d;--cy:#38e8ff;--yl:#ffe14d;--bg:#0e1713}
+body{background:var(--bg);color:#efe9ff;font-family:'Pretendard Variable',Pretendard,sans-serif;overflow-x:hidden;
+  background:radial-gradient(800px 560px at 50% -6%,#171034 0%,#0e1713 60%)}
+.stage{min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:48px 20px}
+.marq{font-family:'Press Start 2P',monospace;font-size:11px;color:var(--yl);text-shadow:0 0 12px rgba(255,225,77,.7);margin-bottom:8px}
+.marq2{font-size:10.5px;letter-spacing:.32em;text-indent:.32em;color:#8d82c0;margin-bottom:30px}
+.cab{width:min(92vw,370px);border-radius:20px;padding:24px 20px 22px;position:relative;
+  background:linear-gradient(165deg,#1c1440,#120c28 70%);border:2px solid #38254f;
+  box-shadow:0 26px 70px rgba(0,0,0,.7),0 0 44px rgba(255,77,157,.14),inset 0 0 24px rgba(56,232,255,.05)}
+.cab .logo{display:block;width:90px;margin:0 auto 18px;filter:drop-shadow(0 0 10px rgba(56,232,255,.5))}
+.slots{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:16px}
+.reel{height:86px;border-radius:12px;background:#08051a;border:1px solid #3a2a60;overflow:hidden;position:relative}
+.reel .strip{position:absolute;left:0;right:0;top:0;display:grid;gap:0;transition:transform 2.4s cubic-bezier(.15,.9,.25,1)}
+.reel .cell{height:86px;display:flex;align-items:center;justify-content:center;font-family:'Press Start 2P',monospace;font-size:26px}
+.reel .cell.c1{color:var(--pk);text-shadow:0 0 14px rgba(255,77,157,.8)}
+.reel .cell.c2{color:var(--cy);text-shadow:0 0 14px rgba(56,232,255,.8)}
+.reel .cell.c3{color:var(--yl);text-shadow:0 0 14px rgba(255,225,77,.8)}
+.payline{position:absolute;left:6%;right:6%;top:50%;border-top:1px dashed rgba(255,255,255,.22);pointer-events:none}
+.btn-spin{display:block;width:100%;padding:15px 0;border-radius:12px;border:none;cursor:pointer;
+  font-family:'Press Start 2P',monospace;font-size:12px;color:#14051d;background:linear-gradient(135deg,#ff77b5,#ff2e8a);
+  box-shadow:0 8px 24px rgba(255,77,157,.4)}
+.jack{margin-top:16px;text-align:center;font-family:'Press Start 2P',monospace;font-size:10px;line-height:2;color:var(--yl);
+  opacity:0;transition:opacity .6s;text-shadow:0 0 12px rgba(255,225,77,.7)}
+body.won .jack{opacity:1;animation:blinkj .8s steps(1) 4}
+@keyframes blinkj{50%{opacity:.25}}
+.invite{width:min(92vw,370px);margin-top:26px;text-align:center;opacity:0;transform:translateY(12px);transition:opacity 1s ease .5s,transform 1s ease .5s}
+body.won .invite{opacity:1;transform:none}
+.copy{font-size:13px;line-height:2.05;color:#cfc6ec;word-break:keep-all}
+.detail{margin-top:18px;display:grid;grid-template-columns:1fr 1fr;gap:12px;text-align:left}
+.pill{border:1px solid #3a2a60;border-radius:12px;padding:12px 14px;background:rgba(20,12,44,.6)}
+.pill .k{font-size:8.5px;letter-spacing:.3em;color:#7c6fb0;margin-bottom:4px}
+.pill .v{font-size:13px;font-weight:700;color:#f2edff}
+.pill.wide{grid-column:1/-1}
+.host{margin-top:14px;font-size:10.5px;letter-spacing:.18em;color:#9188bd}
+.rsvp-open{display:block;width:min(92vw,370px);margin:28px auto 0;padding:17px 0;border-radius:999px;border:none;cursor:pointer;
+  background:linear-gradient(135deg,#54ecff,#1fa4c8);color:#04212b;font-family:inherit;font-weight:800;
+  font-size:13.5px;letter-spacing:.35em;text-indent:.35em;box-shadow:0 10px 30px rgba(56,232,255,.3)}
+.sheet{position:fixed;inset:0;background:rgba(4,2,10,.8);backdrop-filter:blur(8px);display:none;align-items:flex-end;justify-content:center;z-index:50}
+.sheet.on{display:flex}
+.panel{width:100%;max-width:480px;background:#130d2a;border:1px solid #3a2a60;border-bottom:none;
+  border-radius:22px 22px 0 0;padding:30px 26px calc(30px + env(safe-area-inset-bottom));max-height:88svh;overflow-y:auto;animation:up .35s cubic-bezier(.2,.8,.2,1)}
+@keyframes up{from{transform:translateY(60px);opacity:0}to{transform:none;opacity:1}}
+.panel h2{font-family:'Press Start 2P',monospace;font-size:12px;color:var(--cy);text-align:center;margin-bottom:8px;text-shadow:0 0 10px rgba(56,232,255,.6)}
+.panel .note{font-size:11.5px;color:#8d82c0;text-align:center;margin-bottom:22px;line-height:1.8}
+.field{margin-bottom:16px}
+.field label{display:block;font-size:10.5px;letter-spacing:.2em;color:#a99ed6;margin-bottom:7px}
+.field input{width:100%;background:#1c1440;border:1px solid #3f2e6b;border-radius:10px;padding:13px 14px;color:#f4efff;font-family:inherit;font-size:15px;outline:none}
+.field input:focus{border-color:var(--pk)}
+.choice{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.choice input{display:none}
+.choice span{display:block;text-align:center;padding:13px 6px;border:1px solid #3f2e6b;border-radius:10px;font-size:13px;color:#b3a8dd;cursor:pointer}
+.choice input:checked+span{border-color:var(--pk);color:#ffd7ea;background:rgba(255,77,157,.14)}
+.submit{width:100%;margin-top:8px;padding:16px 0;border-radius:12px;border:none;cursor:pointer;
+  background:linear-gradient(135deg,#ff77b5,#ff2e8a);color:#1d0512;font-family:inherit;font-weight:800;font-size:14px;letter-spacing:.3em;text-indent:.3em}
+.close{display:block;margin:16px auto 0;background:none;border:none;color:#6f65a0;font-size:11px;letter-spacing:.3em;cursor:pointer;font-family:inherit}
+.done{text-align:center;padding:34px 0 20px;display:none}
+.done .big{font-family:'Press Start 2P',monospace;font-size:14px;color:var(--yl);margin-bottom:16px;text-shadow:0 0 12px rgba(255,225,77,.7)}
+.done p{font-size:13px;color:#b3a8dd;line-height:2}
+.foot{text-align:center;font-size:10px;letter-spacing:.3em;color:#453d68;padding-bottom:40px}
+
+.rsvp-open{display:none}
+body.rsvp-ready .rsvp-open{display:block;animation:rsvpin .9s ease}
+@keyframes rsvpin{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+
+/* Air House theme: edit these tokens to change the palette. */
+:root{--air-bg:#0e1713;--air-panel:#18271f;--air-accent:#87a86b;--air-gold:#cfdf9f;--air-text:#f4f5ec;--air-muted:#b5c5b5;--air-line:#455a44;--pk:var(--air-accent);--cy:var(--air-gold);--yl:var(--air-gold)}
+body{color:var(--air-text);background:radial-gradient(ellipse at 50% 0%,#263c2b 0%,var(--air-bg) 70%)}
+.marq,.jack,.panel h2{font-family:'Cormorant Garamond',Georgia,serif;text-shadow:none}
+.marq{font-size:28px;letter-spacing:.035em;text-align:center}.marq2{color:var(--air-muted);font-size:9px;letter-spacing:.23em}
+.cab{background:linear-gradient(150deg,#253c2c,var(--air-panel));border:1px solid var(--air-line);box-shadow:0 28px 80px #09030788,inset 0 1px #cfdf9f33;border-radius:22px}
+.cab .logo{filter:none}.reel{background:#101c15;border-color:var(--air-line)}.reel .cell{font-family:inherit;font-size:35px;text-shadow:none!important}
+.btn-spin,.submit,.rsvp-open{background:linear-gradient(120deg,#e6edc9,var(--air-gold));color:#1d2b1b;box-shadow:0 8px 24px #09030744;font-family:inherit;letter-spacing:.06em;font-weight:700;text-indent:0}
+.btn-spin{font-size:11px}.jack{font-size:18px;letter-spacing:.14em}.copy{color:var(--air-text);font-size:14px}.copy b{font-family:inherit;font-size:21px;font-weight:600}.eyebrow{font-size:11px;letter-spacing:.22em;color:var(--air-gold)}
+.pill{background:#1b3023aa;border-color:var(--air-line)}.pill .k{color:var(--air-gold)}.pill .v{color:var(--air-text)}.pill small{font-weight:400;line-height:2}.host{color:var(--air-muted)}.invite>div[style]{color:var(--air-muted)!important;line-height:1.9;font-size:11px!important}
+.panel{background:var(--air-panel);border-color:var(--air-line)}.panel h2{font-size:26px;letter-spacing:.08em}.panel .note,.field label,.privacy{color:var(--air-muted)}.field label{font-size:12px;letter-spacing:.03em}
+.field input{background:#102018;border-color:var(--air-line);color:var(--air-text);font-size:16px}.field input::placeholder{color:#8caa92}.choice span{border-color:var(--air-line);color:var(--air-text);line-height:1.6;padding:12px}.choice input:checked+span{background:#516c3e55;border-color:var(--air-gold);color:var(--air-text)}
+.choice input{display:block;position:absolute;opacity:0;width:1px;height:1px}.choice label{position:relative}.choice input:focus-visible+span{outline:2px solid var(--air-gold);outline-offset:3px}.close{color:var(--air-muted);padding:8px;font-size:12px}.privacy{font-size:11px;line-height:1.7;margin:18px 0}.foot{color:var(--air-muted);font-size:9px}
+button:focus-visible{outline:2px solid var(--air-gold);outline-offset:4px}
+.companion-notice{margin:20px 0 0;padding:18px;border:1px solid var(--air-gold);border-radius:14px;background:#cfdf9f14;text-align:left;color:var(--air-text);font-size:15px;line-height:1.8;word-break:keep-all}
+.companion-notice strong{display:block;margin-bottom:7px;color:var(--air-gold);font-size:16px;font-weight:800}
+.companion-notice b{color:#fff;font-weight:800;text-decoration:underline;text-underline-offset:3px}
+.panel .companion-notice{margin:0 0 22px}
+.registration-warning{margin-top:14px;padding-top:14px;border-top:1px solid #cfdf9f55;color:#f5d9b7;font-size:14px;line-height:1.8;font-weight:700}
+.companion-fields{min-width:0;margin:24px 0;padding:18px 16px 2px;border:1px solid var(--air-gold);border-radius:14px}
+.companion-fields legend{padding:0 8px;color:var(--air-gold);font-size:16px;font-weight:800}
+.field-note{margin:0 0 18px;color:var(--air-muted);font-size:13px;line-height:1.8;word-break:keep-all}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+.ticket-confirmation{border:1px solid var(--air-line);border-radius:12px;padding:16px;margin:24px 0 18px;min-width:0}
+.ticket-confirmation legend{padding:0 6px;color:var(--air-text);font-size:13px;line-height:1.8;font-weight:500}
+.ticket-confirmation label{display:flex;align-items:center;gap:10px;min-height:44px;cursor:pointer;font-size:14px}
+.ticket-confirmation input{width:20px;height:20px;flex-shrink:0;accent-color:var(--air-gold)}
+
+/* Keep the approved reveal and RSVP structure; adapt typography to the festival. */
+.marq{font-family:inherit;font-weight:800;font-size:28px;letter-spacing:.08em}
+.marq2{font-size:8.5px;letter-spacing:.19em;text-align:center}
+.copy b{font-size:20px;line-height:1.65;letter-spacing:-.045em}
+.detail .pill .v{font-size:12px;line-height:1.7;word-break:keep-all}
+.pill small{display:block;font-size:11px;line-height:1.75;margin-top:4px}
+.companion-notice strong{font-size:15px}.companion-notice{font-size:14px}
+.event-link{display:inline-block;margin-top:14px;color:var(--air-gold);font-size:12px;text-underline-offset:4px}
+.sheet{padding-top:20px}.panel{overscroll-behavior:contain}
+</style>
+<link rel="icon" type="image/jpeg" href="../assets/1club-favicon-20261006.jpg">
+</head>
+<body>
+<div class="stage">
+  <div class="marq">THE AIR HOUSE</div>
+  <div class="marq2">NATURE · MUSIC · 1%CLUB INVITATION</div>
+  <div class="cab">
+    <img class="logo" src="../assets/logo-white.png" alt="1%CLUB">
+    <div class="slots">
+      <div class="reel"><div class="strip" id="r0"></div><div class="payline"></div></div>
+      <div class="reel"><div class="strip" id="r1"></div><div class="payline"></div></div>
+      <div class="reel"><div class="strip" id="r2"></div><div class="payline"></div></div>
+    </div>
+    <button class="btn-spin" id="spin">PLAY YOUR INVITATION</button>
+    <div class="jack">FEEL THE RHYTHM<br>YOU ARE INVITED</div>
+  </div>
+  <div class="invite">
+    <p class="copy"><span class="eyebrow">THE AIR HOUSE 2026</span><br><b>자연 속, 음악과 함께하는 24시간.</b><br>가을의 공기, 밤의 리듬, 아침의 여유.<br>에어하우스 페스티벌에<br>1%CLUB의 소중한 게스트를 초대합니다.</p>
+    <div class="detail">
+      <div class="pill"><div class="k">DATE</div><div class="v">10. 24 (토) – 25 (일)</div></div>
+      <div class="pill"><div class="k">TIME</div><div class="v">토 14:00 – 일 14:00</div></div>
+      <div class="pill wide"><div class="k">PLACE</div><div class="v">남양주 더 드림핑<br><small>경기도 남양주시 화도읍 북한강로 1630-22</small></div></div>
+    </div>
+    <a class="event-link" href="https://www.the-airhouse.com/info" target="_blank" rel="noopener">행사 공식 안내 ↗</a>
+    <div class="host">invited by 1%CLUB 김준형</div>
+    <div style="margin-top:10px;font-size:10px;color:#7c6fb0;letter-spacing:.06em">10월 24일(토) 14:00부터 입장 가능<br>페스티벌 입장 초청 · 캠핑·숙박은 포함되지 않습니다.</div>
+    <aside class="companion-notice" aria-label="RSVP 입력 전 준비 안내">
+      <strong>동반인의 이름·연락처도 준비해 주세요</strong>
+      <p>동반인이 있다면 <b>성함과 연락처</b>가 필요합니다.<br>RSVP 입력 전 미리 준비해 주세요.</p>
+    </aside>
+  </div>
+  <button class="rsvp-open" onclick="openSheet()">R S V P</button>
+</div>
+
+<div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-label="AIR HOUSE RSVP">
+  <div class="panel">
+    <div id="formWrap">
+      <h2 id="rsvp-title" tabindex="-1">AIR HOUSE RSVP</h2>
+      <p class="note">참석하실 분의 정보를 남겨주세요.<br>현장에서 신분증·이름·연락처 확인 후 입장합니다.</p>
+      <aside class="companion-notice" aria-label="RSVP 입력 전 준비 안내">
+        <strong>동반인의 이름·연락처도 준비해 주세요</strong>
+        <p>동반인이 있다면 <b>성함과 연락처</b>가 필요합니다.<br>RSVP 입력 전 미리 준비해 주세요.</p>
+        <p class="registration-warning">현장에서 본인과 동반인의 신분증·이름·연락처를 확인합니다. 등록 정보가 정확하지 않으면 입장 확인이 어려울 수 있으니 제출 전 다시 확인해 주세요.</p>
+      </aside>
+      <form id="rsvp" action="https://docs.google.com/forms/d/e/1FAIpQLSeYXESu6um99lC3zDEebt2_b6OY_rbYHPm8-2j4QbTJV_JzvQ/formResponse" method="POST">
+<div class="event-reminder" style="border:1px solid var(--air-line);border-radius:12px;padding:14px;margin:0 0 22px;color:var(--air-text);font-size:13px;line-height:1.8"><strong>행사 시간 · 장소</strong><br>2026년 10월 24일(토) 14:00 ~ 25일(일) 14:00<br>남양주 더 드림핑<br><small>경기도 남양주시 화도읍 북한강로 1630-22</small><br>캠핑·숙박은 포함되지 않습니다.</div>
+<div class="field"><label for="name">이름</label><input id="name" type="text" name="entry.587756264" required placeholder="신분증과 동일한 이름" autocomplete="name"></div>
+<div class="field"><label for="phone">연락처</label><input id="phone" type="tel" name="entry.1237914391" required placeholder="010-0000-0000" autocomplete="tel"></div>
+<div class="field"><label for="email">이메일</label><input id="email" type="email" name="entry.452201548" required placeholder="초대 안내를 받을 이메일" autocomplete="email" autocapitalize="none" spellcheck="false"></div>
+<div class="field"><label for="inviter">초대 링크를 누구에게 받으셨나요?</label><input id="inviter" type="text" name="entry.1034315274"  placeholder="초대 링크를 보내주신 분의 이름 (선택)" ></div>
+<fieldset class="companion-fields" aria-describedby="companion-help"><legend>동반인 정보</legend>
+<p class="field-note" id="companion-help">동반인이 있다면 성함과 연락처를 모두 입력해 주세요. 동반인이 없으면 비워 두세요.</p>
+<div class="field"><label for="companion_name">동반인 성함</label><input id="companion_name" type="text" name="entry.504380157"  placeholder="동반인의 신분증과 동일한 이름" autocomplete="section-companion name" aria-describedby="companion-help"></div>
+<div class="field"><label for="companion_phone">동반인 연락처</label><input id="companion_phone" type="tel" name="entry.879295553"  placeholder="동반인의 연락처" autocomplete="section-companion tel" aria-describedby="companion-help"></div>
+</fieldset>
+<p class="privacy">입력하신 정보는 1%CLUB의 초대 확인·행사 안내 및 에어하우스 현장 입장 확인에 사용됩니다. 동반인 정보는 동반인의 동의를 받은 후 입력해 주세요.</p>
+<fieldset class="ticket-confirmation"><legend><strong>입장 안내 확인</strong><br>현장에서 신분증·이름·연락처 확인 후 입장할 수 있습니다. 본인과 동반인의 신분증을 지참해 주세요.</legend><label for="admission_confirmed"><input id="admission_confirmed" type="checkbox" name="entry.682465663" value="입장 안내를 확인했습니다" required><span>입장 안내를 확인했습니다</span></label></fieldset>
+<button type="submit" class="submit">참석 회신 보내기</button></form>
+      <button class="close" onclick="closeSheet()">닫기</button>
+    </div>
+    </div></div>
+<div class="foot">1%CLUB · THE AIR HOUSE 2026</div>
+
+<script>
+const SYM=[["🌿","🎵","🎧","🌙","🎵"],["🎧","🌿","🎵","🌙","🎵"],["🌙","🎧","🌿","🎵","🎵"]];
+const FINAL=["🎵","🎵","🎵"];const CLS=["c1","c2","c3"];
+const H=86;
+function buildReel(id,syms,fin){
+  const el=document.getElementById(id);el.innerHTML="";
+  const seq=[];
+  for(let r=0;r<5;r++)seq.push(...syms);
+  seq.push(fin);
+  seq.forEach((s,i)=>{const d=document.createElement('div');
+    d.className='cell '+CLS[i%3];d.textContent=s;el.appendChild(d)});
+  el.style.transition='none';el.style.transform='translateY(0)';
+  return seq.length;
+}
+let spinning=false;
+function spin(){
+  if(spinning)return;spinning=true;
+  document.body.classList.remove('won');
+  const lens=[0,1,2].map(i=>buildReel('r'+i,SYM[i],FINAL[i]));
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{
+    [0,1,2].forEach(i=>{
+      const el=document.getElementById('r'+i);
+      el.style.transition=`transform ${1.6+i*.45}s cubic-bezier(.15,.9,.25,1)`;
+      el.style.transform=`translateY(-${(lens[i]-1)*H}px)`;
+    });
+    setTimeout(()=>{document.body.classList.add('won');document.body.classList.add('rsvp-ready');spinning=false;},1.6*1000+2*450+300);
+  }));
+}
+document.getElementById('spin').addEventListener('click',spin);
+[0,1,2].forEach(i=>buildReel('r'+i,SYM[i],FINAL[i]));
+function openSheet(){document.getElementById('sheet').classList.add('on');document.body.style.overflow='hidden';document.querySelector('.panel').scrollTop=0;document.getElementById('rsvp-title').focus({preventScroll:true})}
+function closeSheet(){document.getElementById('sheet').classList.remove('on');document.body.style.overflow='';document.querySelector('.rsvp-open').focus()}
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&document.getElementById('sheet').classList.contains('on'))closeSheet()});
+
+const companionInputs=[...document.querySelectorAll('.companion-fields input')];
+function validateCompanion(){
+  const hasCompanion=companionInputs.some(input=>input.value.trim());
+  companionInputs.forEach(input=>{
+    input.required=hasCompanion;
+    input.setCustomValidity(hasCompanion&&!input.value.trim()?'동반인의 성함과 연락처를 모두 입력해 주세요.':'');
+  });
+}
+companionInputs.forEach(input=>input.addEventListener('input',validateCompanion));
+document.getElementById('rsvp').addEventListener('submit',event=>{
+  companionInputs.forEach(input=>{input.value=input.value.trim()});
+  validateCompanion();
+  if(!event.currentTarget.reportValidity())event.preventDefault();
+});
+
+new MutationObserver(()=>{
+  if(document.body.classList.contains('rsvp-ready')&&!window.__rsvpScrolled){
+    window.__rsvpScrolled=true;
+    setTimeout(()=>{const b=document.querySelector('.rsvp-open');
+      if(b)b.scrollIntoView({behavior:'smooth',block:'center'});},1000);
+  }
+}).observe(document.body,{attributes:true,attributeFilter:['class']});
+</script>
+</body>
+</html>
